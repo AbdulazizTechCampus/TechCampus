@@ -16,6 +16,206 @@ const USER_TYPES = {
   admin: 'مدير الموقع'
 };
 
+// Property Categories
+const PROPERTY_CATEGORIES = {
+  residential: 'سكني',
+  commercial: 'تجاري',
+  industrial: 'صناعي',
+  medical: 'صحي',
+  educational: 'تعليمي',
+  agricultural: 'زراعي'
+};
+
+const PROPERTY_TYPES = {
+  land: 'أرض',
+  room: 'غرفة',
+  studio: 'استوديو',
+  apartment: 'شقة',
+  floor: 'دور',
+  villa: 'فيلا',
+  building: 'مبنى',
+  tower: 'برج',
+  showroom: 'معرض',
+  store: 'متجر',
+  office: 'مكتب',
+  rest_house: 'استراحة',
+  chalet: 'شاليه',
+  farm: 'مزرعة',
+  hospital: 'مستشفى',
+  clinic: 'عيادة',
+  workshop: 'ورشة',
+  factory: 'مصنع',
+  warehouse: 'مستودع',
+  school: 'مدرسة',
+  hotel: 'فندق',
+  gas_station: 'محطة'
+};
+
+const REGIONS = {
+  central: 'الوسطى',
+  eastern: 'الشرقية', 
+  northern: 'الشمالية',
+  western: 'الغربية',
+  southern: 'الجنوبية'
+};
+
+// Sample Properties Data
+const SAMPLE_PROPERTIES = [
+  {
+    id: 1,
+    title: 'فيلا فاخرة مع مسبح في الرياض',
+    price: '2,500,000',
+    location: 'حي الملقا، الرياض',
+    area: '450',
+    bedrooms: 5,
+    bathrooms: 4,
+    type: 'villa',
+    category: 'residential',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjByZWFsJTIwZXN0YXRlfGVufDB8fHx8MTc1NTI2OTg1NHww&ixlib=rb-4.1.0&q=85',
+    status: 'للبيع',
+    featured: true,
+    views: 1250,
+    agent: {
+      name: 'أحمد محمد العبدالله',
+      phone: '+966501234567',
+      image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=agent1'
+    }
+  },
+  {
+    id: 2,
+    title: 'شقة حديثة في برج سكني راقي',
+    price: '850,000',
+    location: 'حي الملز، الرياض',
+    area: '180',
+    bedrooms: 3,
+    bathrooms: 2,
+    type: 'apartment',
+    category: 'residential',
+    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjByZWFsJTIwZXN0YXRlfGVufDB8fHx8MTc1NTI2OTg1NHww&ixlib=rb-4.1.0&q=85',
+    status: 'للإيجار',
+    featured: true,
+    views: 890,
+    agent: {
+      name: 'فاطمة سالم الخالد',
+      phone: '+966502345678',
+      image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=agent2'
+    }
+  },
+  {
+    id: 3,
+    title: 'مجمع تجاري في موقع استراتيجي',
+    price: '5,200,000',
+    location: 'طريق الملك فهد، جدة',
+    area: '1200',
+    type: 'building',
+    category: 'commercial',
+    image: 'https://images.unsplash.com/photo-1621831337128-35676ca30868?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxjb21tZXJjaWFsJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzU1Mzc1MDEyfDA&ixlib=rb-4.1.0&q=85',
+    status: 'للبيع',
+    featured: true,
+    views: 2150,
+    agent: {
+      name: 'خالد عبدالرحمن النمر',
+      phone: '+966503456789',
+      image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=agent3'
+    }
+  },
+  {
+    id: 4,
+    title: 'فيلا عصرية مع حديقة واسعة',
+    price: '1,800,000',
+    location: 'حي النرجس، الرياض',
+    area: '380',
+    bedrooms: 4,
+    bathrooms: 3,
+    type: 'villa',
+    category: 'residential',
+    image: 'https://images.unsplash.com/photo-1670589953882-b94c9cb380f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB2aWxsYXxlbnwwfHx8fDE3NTUzNzUwMDd8MA&ixlib=rb-4.1.0&q=85',
+    status: 'للبيع',
+    featured: false,
+    views: 765,
+    agent: {
+      name: 'سارة أحمد الفريح',
+      phone: '+966504567890',
+      image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=agent4'
+    }
+  },
+  {
+    id: 5,
+    title: 'مكاتب إدارية في برج حديث',
+    price: '12,000',
+    location: 'حي العليا، الرياض',
+    area: '250',
+    type: 'office',
+    category: 'commercial',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHw0fHxjb21tZXJjaWFsJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzU1Mzc1MDEyfDA&ixlib=rb-4.1.0&q=85',
+    status: 'للإيجار',
+    featured: false,
+    views: 420,
+    agent: {
+      name: 'محمد علي السويد',
+      phone: '+966505678901',
+      image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=agent5'
+    }
+  },
+  {
+    id: 6,
+    title: 'قصر فخم مع إطلالة مميزة',
+    price: '8,500,000',
+    location: 'حي الياسمين، الرياض',
+    area: '800',
+    bedrooms: 8,
+    bathrooms: 6,
+    type: 'villa',
+    category: 'residential',
+    image: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjByZWFsJTIwZXN0YXRlfGVufDB8fHx8MTc1NTI2OTg1NHww&ixlib=rb-4.1.0&q=85',
+    status: 'للبيع',
+    featured: true,
+    views: 3420,
+    agent: {
+      name: 'عبدالله راشد القحطاني',
+      phone: '+966506789012',
+      image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=agent6'
+    }
+  }
+];
+
+// Sample Agents Data
+const SAMPLE_AGENTS = [
+  {
+    id: 1,
+    name: 'أحمد محمد العبدالله',
+    license: 'FAL-12345',
+    region: 'الرياض',
+    followers: 1250,
+    properties: 45,
+    requests: 12,
+    image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=agent1',
+    rating: 4.8
+  },
+  {
+    id: 2,
+    name: 'فاطمة سالم الخالد',
+    license: 'FAL-23456',
+    region: 'جدة',
+    followers: 890,
+    properties: 32,
+    requests: 8,
+    image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=agent2',
+    rating: 4.9
+  },
+  {
+    id: 3,
+    name: 'خالد عبدالرحمن النمر',
+    license: 'FAL-34567',
+    region: 'الدمام',
+    followers: 2150,
+    properties: 67,
+    requests: 25,
+    image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=agent3',
+    rating: 4.7
+  }
+];
+
 // Header Component
 const Header = ({ onLoginClick, currentUser, onLogout }) => {
   return (
@@ -24,29 +224,46 @@ const Header = ({ onLoginClick, currentUser, onLogout }) => {
         <div className="header-content">
           <div className="logo-section">
             <div className="logo">🏠</div>
-            <h1 className="site-title">عنوان</h1>
-            <p className="site-subtitle">منصة الوساطة والتسويق العقاري</p>
+            <div className="brand-info">
+              <h1 className="site-title">عنوان</h1>
+              <p className="site-subtitle">منصة الوساطة والتسويق العقاري</p>
+            </div>
           </div>
           
           <nav className="main-nav">
             <ul>
-              <li><a href="#properties">العقارات</a></li>
-              <li><a href="#brokers">الوساطة</a></li>
-              <li><a href="#photography">التصوير</a></li>
-              <li><a href="#pricing">الأسعار والباقات</a></li>
-              <li><a href="#policies">السياسات والشروط</a></li>
-              <li><a href="#support">الدعم</a></li>
-              <li><a href="#language">اللغة</a></li>
+              <li className="nav-item dropdown">
+                <a href="#properties" className="nav-link">العقارات</a>
+                <div className="dropdown-content">
+                  <a href="#add-property">إضافة عقار</a>
+                  <a href="#property-request">طلب عقار</a>
+                </div>
+              </li>
+              <li className="nav-item dropdown">
+                <a href="#brokers" className="nav-link">الوساطة</a>
+                <div className="dropdown-content">
+                  <a href="#brokers-list">الوسطاء</a>
+                  <a href="#mediation-contract">عقد وساطة</a>
+                  <a href="#marketing-contract">عقد تسويق</a>
+                </div>
+              </li>
+              <li><a href="#photography" className="nav-link">التصوير</a></li>
+              <li><a href="#pricing" className="nav-link">الأسعار والباقات</a></li>
+              <li><a href="#policies" className="nav-link">السياسات والشروط</a></li>
+              <li><a href="#support" className="nav-link">الدعم</a></li>
+              <li><a href="#language" className="nav-link">اللغة (عربي/E)</a></li>
             </ul>
           </nav>
           
           <div className="auth-section">
             {currentUser ? (
               <div className="user-menu">
-                <span className="welcome-text">
-                  مرحباً، {currentUser.full_name_arabic || currentUser.phone_number}
-                </span>
-                <span className="user-type-badge">{USER_TYPES[currentUser.user_type]}</span>
+                <div className="user-info">
+                  <span className="welcome-text">
+                    مرحباً، {currentUser.full_name_arabic || currentUser.phone_number}
+                  </span>
+                  <span className="user-type-badge">{USER_TYPES[currentUser.user_type]}</span>
+                </div>
                 <button onClick={onLogout} className="logout-btn">تسجيل الخروج</button>
               </div>
             ) : (
@@ -59,9 +276,277 @@ const Header = ({ onLoginClick, currentUser, onLogout }) => {
   );
 };
 
-// Login Modal Component
+// Search Bar Component
+const SearchBar = ({ onSearch }) => {
+  const [searchData, setSearchData] = useState({
+    type: 'all',
+    city: '',
+    category: '',
+    propertyType: '',
+    minPrice: '',
+    maxPrice: '',
+    minArea: '',
+    maxArea: '',
+    bedrooms: '',
+    bathrooms: ''
+  });
+  
+  const [showAdvanced, setShowAdvanced] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setSearchData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSearch = () => {
+    onSearch(searchData);
+  };
+
+  return (
+    <section className="search-section">
+      <div className="container">
+        <div className="search-bar">
+          <div className="search-tabs">
+            <button 
+              className={`search-tab ${searchData.type === 'all' ? 'active' : ''}`}
+              onClick={() => setSearchData(prev => ({ ...prev, type: 'all' }))}
+            >
+              الكل
+            </button>
+            <button 
+              className={`search-tab ${searchData.type === 'sale' ? 'active' : ''}`}
+              onClick={() => setSearchData(prev => ({ ...prev, type: 'sale' }))}
+            >
+              للبيع
+            </button>
+            <button 
+              className={`search-tab ${searchData.type === 'rent' ? 'active' : ''}`}
+              onClick={() => setSearchData(prev => ({ ...prev, type: 'rent' }))}
+            >
+              للإيجار
+            </button>
+            <button 
+              className={`search-tab ${searchData.type === 'projects' ? 'active' : ''}`}
+              onClick={() => setSearchData(prev => ({ ...prev, type: 'projects' }))}
+            >
+              المشاريع
+            </button>
+            <button 
+              className={`search-tab ${searchData.type === 'requests' ? 'active' : ''}`}
+              onClick={() => setSearchData(prev => ({ ...prev, type: 'requests' }))}
+            >
+              الطلبات
+            </button>
+          </div>
+          
+          <div className="search-inputs">
+            <div className="search-field">
+              <select name="city" value={searchData.city} onChange={handleInputChange}>
+                <option value="">اختر المدينة</option>
+                <option value="riyadh">الرياض</option>
+                <option value="jeddah">جدة</option>
+                <option value="dammam">الدمام</option>
+                <option value="mecca">مكة المكرمة</option>
+                <option value="medina">المدينة المنورة</option>
+              </select>
+            </div>
+            
+            <div className="search-field">
+              <select name="category" value={searchData.category} onChange={handleInputChange}>
+                <option value="">فئة العقار</option>
+                {Object.entries(PROPERTY_CATEGORIES).map(([key, value]) => (
+                  <option key={key} value={key}>{value}</option>
+                ))}
+              </select>
+            </div>
+            
+            <button 
+              className="advanced-search-btn"
+              onClick={() => setShowAdvanced(!showAdvanced)}
+            >
+              البحث المتقدم
+            </button>
+            
+            <button className="search-btn" onClick={handleSearch}>
+              <span>🔍</span>
+              بحث
+            </button>
+          </div>
+          
+          {showAdvanced && (
+            <div className="advanced-search">
+              <div className="advanced-row">
+                <select name="propertyType" value={searchData.propertyType} onChange={handleInputChange}>
+                  <option value="">نوع العقار</option>
+                  {Object.entries(PROPERTY_TYPES).map(([key, value]) => (
+                    <option key={key} value={key}>{value}</option>
+                  ))}
+                </select>
+                
+                <input 
+                  type="number" 
+                  name="minPrice" 
+                  placeholder="الحد الأدنى للسعر"
+                  value={searchData.minPrice}
+                  onChange={handleInputChange}
+                />
+                
+                <input 
+                  type="number" 
+                  name="maxPrice" 
+                  placeholder="الحد الأقصى للسعر"
+                  value={searchData.maxPrice}
+                  onChange={handleInputChange}
+                />
+                
+                <input 
+                  type="number" 
+                  name="minArea" 
+                  placeholder="أقل مساحة (م²)"
+                  value={searchData.minArea}
+                  onChange={handleInputChange}
+                />
+                
+                <input 
+                  type="number" 
+                  name="maxArea" 
+                  placeholder="أكبر مساحة (م²)"
+                  value={searchData.maxArea}
+                  onChange={handleInputChange}
+                />
+                
+                <select name="bedrooms" value={searchData.bedrooms} onChange={handleInputChange}>
+                  <option value="">عدد الغرف</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5+">5+</option>
+                </select>
+                
+                <select name="bathrooms" value={searchData.bathrooms} onChange={handleInputChange}>
+                  <option value="">دورات المياه</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4+">4+</option>
+                </select>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Property Card Component
+const PropertyCard = ({ property }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  return (
+    <div className="property-card">
+      <div className="property-image">
+        <img src={property.image} alt={property.title} />
+        <div className="property-status">{property.status}</div>
+        <div className="property-actions">
+          <button 
+            className={`action-btn favorite ${isFavorite ? 'active' : ''}`}
+            onClick={() => setIsFavorite(!isFavorite)}
+          >
+            ❤️
+          </button>
+          <button className="action-btn share">📤</button>
+        </div>
+        {property.featured && <div className="featured-badge">مميز</div>}
+      </div>
+      
+      <div className="property-content">
+        <h3 className="property-title">{property.title}</h3>
+        <div className="property-price">
+          {property.price} ريال سعودي
+        </div>
+        <div className="property-location">📍 {property.location}</div>
+        
+        <div className="property-details">
+          <div className="property-category">
+            {PROPERTY_CATEGORIES[property.category]} - {PROPERTY_TYPES[property.type]}
+          </div>
+          <div className="property-specs">
+            <span>📐 {property.area} م²</span>
+            {property.bedrooms && <span>🛏️ {property.bedrooms}</span>}
+            {property.bathrooms && <span>🚿 {property.bathrooms}</span>}
+          </div>
+        </div>
+        
+        <div className="property-stats">
+          <span className="views">👁️ {property.views} مشاهدة</span>
+        </div>
+        
+        <div className="agent-info">
+          <img src={property.agent.image} alt={property.agent.name} className="agent-avatar" />
+          <div className="agent-details">
+            <div className="agent-name">{property.agent.name}</div>
+            <div className="agent-contact">
+              <button className="contact-btn">📞 اتصال</button>
+              <button className="chat-btn">💬 محادثة</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Agent Card Component
+const AgentCard = ({ agent }) => {
+  const [isFollowing, setIsFollowing] = useState(false);
+
+  return (
+    <div className="agent-card">
+      <div className="agent-header">
+        <img src={agent.image} alt={agent.name} className="agent-photo" />
+        <div className="agent-info">
+          <h3 className="agent-name">{agent.name}</h3>
+          <div className="agent-license">رخصة فال: {agent.license}</div>
+          <div className="agent-region">📍 {agent.region}</div>
+          <div className="agent-rating">
+            ⭐ {agent.rating} ({agent.followers} متابع)
+          </div>
+        </div>
+        <button 
+          className={`follow-btn ${isFollowing ? 'following' : ''}`}
+          onClick={() => setIsFollowing(!isFollowing)}
+        >
+          {isFollowing ? 'متابع' : 'متابعة'}
+        </button>
+      </div>
+      
+      <div className="agent-stats">
+        <div className="stat">
+          <div className="stat-number">{agent.properties}</div>
+          <div className="stat-label">عقار</div>
+        </div>
+        <div className="stat">
+          <div className="stat-number">{agent.requests}</div>
+          <div className="stat-label">طلب</div>
+        </div>
+        <div className="stat">
+          <div className="stat-number">{agent.followers}</div>
+          <div className="stat-label">متابع</div>
+        </div>
+      </div>
+      
+      <div className="agent-actions">
+        <button className="contact-agent-btn">تواصل معي</button>
+      </div>
+    </div>
+  );
+};
+
+// Login Modal Component (unchanged from previous version)
 const LoginModal = ({ isOpen, onClose, onSuccess }) => {
-  const [step, setStep] = useState('phone'); // phone, otp, nafath
+  const [step, setStep] = useState('phone');
   const [formData, setFormData] = useState({
     phone_number: '',
     user_type: 'visitor',
@@ -165,7 +650,6 @@ const LoginModal = ({ isOpen, onClose, onSuccess }) => {
       
       if (response.data.success) {
         setMessage(response.data.message);
-        // Refresh user data
         const profileResponse = await axios.get(`${API}/auth/profile`, {
           headers: { Authorization: `Bearer ${token}` }
         });
@@ -325,7 +809,6 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
-    // Check for stored user data
     const token = localStorage.getItem('access_token');
     const userData = localStorage.getItem('user_data');
     
@@ -351,6 +834,15 @@ function App() {
     setCurrentUser(null);
   };
 
+  const handleSearch = (searchData) => {
+    console.log('Search data:', searchData);
+    // Implement search functionality
+  };
+
+  const featuredProperties = SAMPLE_PROPERTIES.filter(p => p.featured);
+  const latestProperties = SAMPLE_PROPERTIES.slice().reverse().slice(0, 4);
+  const mostViewedProperties = SAMPLE_PROPERTIES.slice().sort((a, b) => b.views - a.views).slice(0, 4);
+
   return (
     <div className="App">
       <Header 
@@ -359,37 +851,32 @@ function App() {
         onLogout={handleLogout}
       />
       
+      <SearchBar onSearch={handleSearch} />
+      
       <main className="main-content">
-        <section className="hero-section">
-          <div className="container">
-            <div className="hero-content">
-              <h2 className="hero-title">منصة عنوان للوساطة والتسويق العقاري</h2>
-              <p className="hero-description">
-                المنصة الرائدة في المملكة العربية السعودية للوساطة والتسويق العقاري
-                <br />
-                تقدم عروض وتستقبل طلبات عقارية بأحدث التقنيات
-              </p>
-              
-              {currentUser ? (
-                <div className="user-welcome">
-                  <h3>مرحباً {currentUser.full_name_arabic || currentUser.phone_number}</h3>
-                  <p>نوع الحساب: {USER_TYPES[currentUser.user_type]}</p>
-                  
+        {currentUser && (
+          <section className="user-welcome-section">
+            <div className="container">
+              <div className="user-welcome-card">
+                <h2>مرحباً بك، {currentUser.full_name_arabic || currentUser.phone_number}</h2>
+                <p>نوع الحساب: {USER_TYPES[currentUser.user_type]}</p>
+                
+                <div className="verification-badges">
                   {currentUser.is_phone_verified && (
-                    <div className="verification-status verified">
+                    <div className="verification-badge verified">
                       ✅ تم التحقق من رقم الهاتف
                     </div>
                   )}
                   
                   {currentUser.is_nafath_verified && (
-                    <div className="verification-status verified">
+                    <div className="verification-badge verified">
                       ✅ تم التحقق من الهوية عبر النفاذ الوطني
                     </div>
                   )}
                   
                   {!currentUser.is_nafath_verified && 
                    ['property_owner', 'broker_individual', 'broker_company'].includes(currentUser.user_type) && (
-                    <div className="verification-status pending">
+                    <div className="verification-badge pending">
                       ⚠️ يتطلب التحقق من الهوية عبر النفاذ الوطني
                       <button 
                         onClick={() => setShowLoginModal(true)} 
@@ -400,46 +887,184 @@ function App() {
                     </div>
                   )}
                 </div>
-              ) : (
-                <div className="auth-prompt">
-                  <p>سجل دخولك للوصول إلى جميع الخدمات</p>
-                  <button 
-                    onClick={() => setShowLoginModal(true)}
-                    className="cta-button"
-                  >
-                    ابدأ الآن
-                  </button>
-                </div>
-              )}
+              </div>
+            </div>
+          </section>
+        )}
+        
+        {/* Featured Properties */}
+        <section className="properties-section">
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-title">العقارات المميزة</h2>
+              <div className="section-tabs">
+                <button className="tab-btn active">الكل</button>
+                <button className="tab-btn">للبيع</button>
+                <button className="tab-btn">للإيجار</button>
+                <button className="tab-btn">المشاريع</button>
+              </div>
+              <a href="#more" className="more-link">المزيد →</a>
+            </div>
+            
+            <div className="properties-grid">
+              {featuredProperties.map(property => (
+                <PropertyCard key={property.id} property={property} />
+              ))}
             </div>
           </div>
         </section>
         
-        <section className="features-section">
+        {/* Latest Properties */}
+        <section className="properties-section latest">
           <div className="container">
-            <h3 className="section-title">أنواع المستخدمين</h3>
-            <div className="user-types-grid">
-              {Object.entries(USER_TYPES).map(([key, name]) => (
-                <div key={key} className="user-type-card">
-                  <h4>{name}</h4>
-                  <p>
-                    {key === 'visitor' && 'يمكنه التصفح والتفاعل مع الإعلانات بالتفضيل والإعجاب فقط'}
-                    {key === 'property_seeker' && 'يمكنه إضافة طلب عقار والتفاعل مع الإعلانات'}
-                    {key === 'property_owner' && 'يمكنه إضافة العقارات وطلب عقود الوساطة والتسويق'}
-                    {key === 'broker_individual' && 'وسيط عقاري فردي مع صلاحيات إدارة العقارات'}
-                    {key === 'broker_company' && 'وسيط عقاري مؤسسي مع صلاحيات موسعة'}
-                    {key === 'photographer' && 'يمكنه تقديم خدمات التصوير العقاري'}
-                    {key === 'admin' && 'مدير الموقع مع كامل الصلاحيات'}
-                  </p>
-                  {['property_owner', 'broker_individual', 'broker_company'].includes(key) && (
-                    <div className="nafath-required">🔐 يتطلب التحقق عبر النفاذ الوطني</div>
-                  )}
-                </div>
+            <div className="section-header">
+              <h2 className="section-title">العقارات الأحدث</h2>
+              <div className="section-tabs">
+                <button className="tab-btn active">الكل</button>
+                <button className="tab-btn">للبيع</button>
+                <button className="tab-btn">للإيجار</button>
+                <button className="tab-btn">المشاريع</button>
+              </div>
+              <a href="#more" className="more-link">المزيد →</a>
+            </div>
+            
+            <div className="properties-grid">
+              {latestProperties.map(property => (
+                <PropertyCard key={property.id} property={property} />
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* Most Viewed Properties */}
+        <section className="properties-section most-viewed">
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-title">العقارات الأكثر مشاهدة</h2>
+              <div className="section-tabs">
+                <button className="tab-btn active">الكل</button>
+                <button className="tab-btn">للبيع</button>
+                <button className="tab-btn">للإيجار</button>
+                <button className="tab-btn">المشاريع</button>
+              </div>
+              <a href="#more" className="more-link">المزيد →</a>
+            </div>
+            
+            <div className="properties-grid">
+              {mostViewedProperties.map(property => (
+                <PropertyCard key={property.id} property={property} />
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* Properties by Region */}
+        <section className="regions-section">
+          <div className="container">
+            <h2 className="section-title">العقارات حسب المنطقة</h2>
+            
+            <div className="regions-tabs">
+              {Object.entries(REGIONS).map(([key, name]) => (
+                <button key={key} className="region-tab">
+                  {name}
+                  <span className="property-count">(125)</span>
+                </button>
+              ))}
+            </div>
+            
+            <div className="properties-grid">
+              {SAMPLE_PROPERTIES.slice(0, 4).map(property => (
+                <PropertyCard key={property.id} property={property} />
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* Agents Section */}
+        <section className="agents-section">
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-title">الوسطاء المميزون</h2>
+              <a href="#more-agents" className="more-link">المزيد →</a>
+            </div>
+            
+            <div className="agents-grid">
+              {SAMPLE_AGENTS.map(agent => (
+                <AgentCard key={agent.id} agent={agent} />
               ))}
             </div>
           </div>
         </section>
       </main>
+      
+      {/* Footer */}
+      <footer className="footer">
+        <div className="container">
+          <div className="footer-content">
+            <div className="footer-section">
+              <div className="footer-logo">
+                <div className="logo">🏠</div>
+                <h3>عنوان</h3>
+                <p>منصة الوساطة والتسويق العقاري</p>
+              </div>
+            </div>
+            
+            <div className="footer-section">
+              <h4>روابط سريعة</h4>
+              <ul>
+                <li><a href="#properties">العقارات</a></li>
+                <li><a href="#brokers">الوسطاء</a></li>
+                <li><a href="#photography">التصوير</a></li>
+                <li><a href="#pricing">الأسعار</a></li>
+              </ul>
+            </div>
+            
+            <div className="footer-section">
+              <h4>خدمات</h4>
+              <ul>
+                <li><a href="#add-property">إضافة عقار</a></li>
+                <li><a href="#property-request">طلب عقار</a></li>
+                <li><a href="#mediation">عقد وساطة</a></li>
+                <li><a href="#marketing">عقد تسويق</a></li>
+              </ul>
+            </div>
+            
+            <div className="footer-section">
+              <h4>تواصل معنا</h4>
+              <div className="contact-info">
+                <p>📞 +966 11 123 4567</p>
+                <p>✉️ info@onwan.sa</p>
+                <p>📍 الرياض، المملكة العربية السعودية</p>
+              </div>
+              
+              <div className="social-links">
+                <a href="#twitter" className="social-link">🐦</a>
+                <a href="#linkedin" className="social-link">💼</a>
+                <a href="#instagram" className="social-link">📷</a>
+              </div>
+            </div>
+            
+            <div className="footer-section">
+              <h4>شهادة التوثيق</h4>
+              <div className="certification">
+                <div className="cert-badge">🏛️</div>
+                <p>منصة معتمدة من الهيئة العامة للعقار</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="footer-bottom">
+            <div className="footer-bottom-content">
+              <p>© 2024 عنوان. جميع الحقوق محفوظة.</p>
+              <div className="footer-links">
+                <a href="#privacy">سياسة الخصوصية</a>
+                <a href="#terms">الشروط والأحكام</a>
+                <a href="#support">الدعم الفني</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
       
       <LoginModal
         isOpen={showLoginModal}
