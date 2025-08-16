@@ -303,6 +303,7 @@ const Header = ({ onLoginClick, currentUser, onLogout }) => {
 const SearchBar = ({ onSearch }) => {
   const [searchData, setSearchData] = useState({
     type: 'all',
+    region: '',
     city: '',
     category: '',
     propertyType: '',
@@ -311,18 +312,100 @@ const SearchBar = ({ onSearch }) => {
     minArea: '',
     maxArea: '',
     bedrooms: '',
-    bathrooms: ''
+    bathrooms: '',
+    voiceSearch: ''
   });
   
   const [showAdvanced, setShowAdvanced] = useState(false);
+  const [availableCities, setAvailableCities] = useState([]);
+  const [isListening, setIsListening] = useState(false);
+  const [voiceSupported, setVoiceSupported] = useState(false);
+
+  // Check for voice support
+  useEffect(() => {
+    setVoiceSupported('webkitSpeechRecognition' in window || 'SpeechRecognition' in window);
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setSearchData(prev => ({ ...prev, [name]: value }));
+    
+    if (name === 'region') {
+      const cities = value ? REGIONS_AND_CITIES[value]?.cities || [] : [];
+      setAvailableCities(cities);
+      setSearchData(prev => ({ ...prev, [name]: value, city: '' })); // Reset city when region changes
+    } else {
+      setSearchData(prev => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSearch = () => {
     onSearch(searchData);
+  };
+
+  // Voice Search functionality
+  const startVoiceSearch = () => {
+    if (!voiceSupported) {
+      alert('المتصفح لا يدعم البحث الصوتي');
+      return;
+    }
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    
+    recognition.lang = 'ar-SA'; // Arabic language
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    setIsListening(true);
+
+    recognition.onresult = (event) => {
+      const voiceText = event.results[0][0].transcript;
+      setSearchData(prev => ({ ...prev, voiceSearch: voiceText }));
+      
+      // Auto-process voice command
+      processVoiceCommand(voiceText);
+    };
+
+    recognition.onerror = (event) => {
+      console.error('Voice recognition error:', event.error);
+      setIsListening(false);
+    };
+
+    recognition.onend = () => {
+      setIsListening(false);
+    };
+
+    recognition.start();
+  };
+
+  const processVoiceCommand = (command) => {
+    // Simple voice command processing
+    const lowerCommand = command.toLowerCase();
+    
+    // Check for property types
+    if (lowerCommand.includes('فيلا')) {
+      setSearchData(prev => ({ ...prev, propertyType: 'villa' }));
+    } else if (lowerCommand.includes('شقة')) {
+      setSearchData(prev => ({ ...prev, propertyType: 'apartment' }));
+    } else if (lowerCommand.includes('أرض')) {
+      setSearchData(prev => ({ ...prev, propertyType: 'land' }));
+    }
+    
+    // Check for sale/rent
+    if (lowerCommand.includes('للبيع')) {
+      setSearchData(prev => ({ ...prev, type: 'sale' }));
+    } else if (lowerCommand.includes('للإيجار')) {
+      setSearchData(prev => ({ ...prev, type: 'rent' }));
+    }
+    
+    // Check for cities
+    Object.values(REGIONS_AND_CITIES).forEach(region => {
+      region.cities.forEach(city => {
+        if (lowerCommand.includes(city)) {
+          setSearchData(prev => ({ ...prev, city: city }));
+        }
+      });
+    });
   };
 
   return (
