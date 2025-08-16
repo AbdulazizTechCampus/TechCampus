@@ -102,6 +102,24 @@ class OnwanAPITester:
         
         success, status, data = self.make_request('POST', 'auth/send-otp', otp_data)
         otp_sent = success and data.get('success') == True
+        
+        # Extract OTP from logs for testing (development hack)
+        if otp_sent:
+            try:
+                import subprocess
+                result = subprocess.run(['tail', '-n', '10', '/var/log/supervisor/backend.err.log'], 
+                                      capture_output=True, text=True)
+                log_content = result.stdout
+                
+                # Look for OTP in the log
+                import re
+                otp_match = re.search(r'رمز التحقق الخاص بك في منصة عنوان هو: (\d{6})', log_content)
+                if otp_match:
+                    self.test_otp = otp_match.group(1)
+                    print(f"   🔍 Extracted OTP from logs: {self.test_otp}")
+            except Exception as e:
+                print(f"   ⚠️ Could not extract OTP from logs: {e}")
+        
         return self.log_test(
             "Send OTP", 
             otp_sent,
