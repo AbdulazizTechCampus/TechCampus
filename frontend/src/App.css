@@ -1245,13 +1245,18 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .search-inputs {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
   }
   
+  .voice-search-container,
   .advanced-search-btn,
   .search-btn {
-    grid-column: span 2;
+    grid-column: span 3;
+  }
+  
+  .voice-search-container {
+    justify-self: center;
   }
 }
 
