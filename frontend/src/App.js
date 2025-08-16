@@ -447,13 +447,20 @@ const SearchBar = ({ onSearch }) => {
           
           <div className="search-inputs">
             <div className="search-field">
-              <select name="city" value={searchData.city} onChange={handleInputChange}>
+              <select name="region" value={searchData.region} onChange={handleInputChange}>
+                <option value="">اختر المنطقة</option>
+                {Object.entries(REGIONS_AND_CITIES).map(([key, region]) => (
+                  <option key={key} value={key}>{region.name}</option>
+                ))}
+              </select>
+            </div>
+            
+            <div className="search-field">
+              <select name="city" value={searchData.city} onChange={handleInputChange} disabled={!searchData.region}>
                 <option value="">اختر المدينة</option>
-                <option value="riyadh">الرياض</option>
-                <option value="jeddah">جدة</option>
-                <option value="dammam">الدمام</option>
-                <option value="mecca">مكة المكرمة</option>
-                <option value="medina">المدينة المنورة</option>
+                {availableCities.map(city => (
+                  <option key={city} value={city}>{city}</option>
+                ))}
               </select>
             </div>
             
@@ -464,6 +471,31 @@ const SearchBar = ({ onSearch }) => {
                   <option key={key} value={key}>{value}</option>
                 ))}
               </select>
+            </div>
+            
+            <div className="voice-search-container">
+              {voiceSupported && (
+                <button 
+                  className={`voice-search-btn ${isListening ? 'listening' : ''}`}
+                  onClick={startVoiceSearch}
+                  disabled={isListening}
+                  title="البحث الصوتي"
+                >
+                  🎤
+                </button>
+              )}
+              
+              {searchData.voiceSearch && (
+                <div className="voice-result">
+                  <span>🗣️ {searchData.voiceSearch}</span>
+                  <button 
+                    className="clear-voice"
+                    onClick={() => setSearchData(prev => ({ ...prev, voiceSearch: '' }))}
+                  >
+                    ×
+                  </button>
+                </div>
+              )}
             </div>
             
             <button 
