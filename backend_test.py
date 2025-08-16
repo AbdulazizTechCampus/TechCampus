@@ -122,6 +122,13 @@ class OnwanAPITester:
             self.token = data.get('access_token')
             
         otp_verified = success and data.get('success') == True and 'access_token' in data
+        
+        # Print detailed error information
+        if not otp_verified:
+            print(f"   🔍 OTP Verification Details:")
+            print(f"      Status Code: {status}")
+            print(f"      Response Data: {json.dumps(data, ensure_ascii=False, indent=6)}")
+            
         return self.log_test(
             "Verify OTP", 
             otp_verified,
