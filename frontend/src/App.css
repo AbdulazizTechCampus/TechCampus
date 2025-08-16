@@ -1274,11 +1274,21 @@ body {
   
   .search-inputs {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
   
+  .voice-search-container,
   .advanced-search-btn,
   .search-btn {
     grid-column: span 1;
+  }
+  
+  .voice-result {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-top: 5px;
   }
   
   .section-header {
