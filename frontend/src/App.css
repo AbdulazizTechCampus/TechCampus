@@ -816,6 +816,14 @@ body {
   font-size: 0.8rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-btn svg, .chat-btn svg {
+  width: 14px;
+  height: 14px;
 }
 
 .contact-btn {
