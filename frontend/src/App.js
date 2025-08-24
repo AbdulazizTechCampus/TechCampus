@@ -578,6 +578,48 @@ const SearchBar = ({ onSearch }) => {
   );
 };
 
+// SVG Icons Component
+const PropertyIcons = {
+  Area: () => (
+    <svg viewBox="0 0 24 24" className="icon-area">
+      <path d="M3 6.5A1.5 1.5 0 014.5 5h15A1.5 1.5 0 0121 6.5v11a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 17.5v-11z M4.5 6a.5.5 0 00-.5.5v11a.5.5 0 00.5.5h15a.5.5 0 00.5-.5v-11a.5.5 0 00-.5-.5h-15z"/>
+      <path d="M8 9h8v1H8V9z M8 11h6v1H8v-1z"/>
+    </svg>
+  ),
+  Bed: () => (
+    <svg viewBox="0 0 24 24" className="icon-bed">
+      <path d="M6 12h12v2H6v-2z M4 8v10h2v-2h12v2h2V8c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2z M6 8h12v2H6V8z"/>
+      <circle cx="9" cy="9" r="1"/>
+      <circle cx="15" cy="9" r="1"/>
+    </svg>
+  ),
+  Bath: () => (
+    <svg viewBox="0 0 24 24" className="icon-bath">
+      <path d="M9 2v3h6V2h2v3.17c1.83.45 3 2.06 3 4.33v9c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2v-9c0-2.27 1.17-3.88 3-4.33V2h2zm-2 6.5c0 1.38 1.12 2.5 2.5 2.5S12 9.88 12 8.5 10.88 6 9.5 6 7 7.12 7 8.5z"/>
+    </svg>
+  ),
+  Location: () => (
+    <svg viewBox="0 0 24 24" className="icon-location">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+    </svg>
+  ),
+  Views: () => (
+    <svg viewBox="0 0 24 24" className="icon-views">
+      <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+    </svg>
+  ),
+  Phone: () => (
+    <svg viewBox="0 0 24 24" className="icon-phone">
+      <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+    </svg>
+  ),
+  Chat: () => (
+    <svg viewBox="0 0 24 24" className="icon-chat">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+    </svg>
+  )
+};
+
 // Property Card Component
 const PropertyCard = ({ property }) => {
   const [isFavorite, setIsFavorite] = useState(false);
