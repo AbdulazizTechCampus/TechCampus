@@ -696,6 +696,61 @@ body {
   gap: 4px;
 }
 
+/* Property Card Icons */
+.property-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.property-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(79, 70, 229, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #4f46e5;
+  font-weight: 500;
+}
+
+.property-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Custom SVG Icons */
+.icon-area {
+  color: #10b981;
+}
+
+.icon-bed {
+  color: #6366f1;
+}
+
+.icon-bath {
+  color: #3b82f6;
+}
+
+.icon-location {
+  color: #ef4444;
+}
+
+.icon-views {
+  color: #f59e0b;
+}
+
+.icon-phone {
+  color: #22c55e;
+}
+
+.icon-chat {
+  color: #8b5cf6;
+}
+
 .property-stats {
   margin-bottom: 20px;
   padding-top: 15px;
