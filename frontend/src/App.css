@@ -768,6 +768,14 @@ body {
 .views {
   color: #718096;
   font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.views svg {
+  width: 16px;
+  height: 16px;
 }
 
 .agent-info {
