@@ -646,21 +646,40 @@ const PropertyCard = ({ property }) => {
         <div className="property-price">
           {property.price} ريال سعودي
         </div>
-        <div className="property-location">📍 {property.location}</div>
+        <div className="property-location">
+          <PropertyIcons.Location />
+          {property.location}
+        </div>
         
         <div className="property-details">
           <div className="property-category">
             {PROPERTY_CATEGORIES[property.category]} - {PROPERTY_TYPES[property.type]}
           </div>
-          <div className="property-specs">
-            <span>📐 {property.area} م²</span>
-            {property.bedrooms && <span>🛏️ {property.bedrooms}</span>}
-            {property.bathrooms && <span>🚿 {property.bathrooms}</span>}
+          <div className="property-icons">
+            <div className="property-icon">
+              <PropertyIcons.Area />
+              {property.area} م²
+            </div>
+            {property.bedrooms && (
+              <div className="property-icon">
+                <PropertyIcons.Bed />
+                {property.bedrooms}
+              </div>
+            )}
+            {property.bathrooms && (
+              <div className="property-icon">
+                <PropertyIcons.Bath />
+                {property.bathrooms}
+              </div>
+            )}
           </div>
         </div>
         
         <div className="property-stats">
-          <span className="views">👁️ {property.views} مشاهدة</span>
+          <span className="views">
+            <PropertyIcons.Views />
+            {property.views} مشاهدة
+          </span>
         </div>
         
         <div className="agent-info">
