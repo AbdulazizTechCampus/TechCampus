@@ -687,8 +687,14 @@ const PropertyCard = ({ property }) => {
           <div className="agent-details">
             <div className="agent-name">{property.agent.name}</div>
             <div className="agent-contact">
-              <button className="contact-btn">📞 اتصال</button>
-              <button className="chat-btn">💬 محادثة</button>
+              <button className="contact-btn">
+                <PropertyIcons.Phone />
+                اتصال
+              </button>
+              <button className="chat-btn">
+                <PropertyIcons.Chat />
+                محادثة
+              </button>
             </div>
           </div>
         </div>
