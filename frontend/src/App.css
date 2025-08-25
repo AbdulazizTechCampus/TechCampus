@@ -704,59 +704,67 @@ body {
   gap: 4px;
 }
 
-/* Property Card Icons */
+/* Property Card Icons - Enhanced Design */
 .property-icons {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .property-icon {
   display: flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(79, 70, 229, 0.1);
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  color: #4f46e5;
-  font-weight: 500;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(79, 70, 229, 0.1);
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  color: #2d3748;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.property-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .property-icon svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
-/* Custom SVG Icons */
+/* Enhanced Icon Colors */
 .icon-area {
-  color: #10b981;
+  filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.3));
 }
 
 .icon-bed {
-  color: #6366f1;
+  filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.3));
 }
 
 .icon-bath {
-  color: #3b82f6;
+  filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.3));
 }
 
 .icon-location {
-  color: #ef4444;
+  filter: drop-shadow(0 2px 4px rgba(239, 68, 68, 0.3));
 }
 
 .icon-views {
-  color: #f59e0b;
+  filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
 }
 
 .icon-phone {
-  color: #22c55e;
+  filter: drop-shadow(0 2px 4px rgba(34, 197, 94, 0.3));
 }
 
 .icon-chat {
-  color: #8b5cf6;
+  filter: drop-shadow(0 2px 4px rgba(139, 92, 246, 0.3));
 }
 
 .property-stats {
