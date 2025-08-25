@@ -578,44 +578,111 @@ const SearchBar = ({ onSearch }) => {
   );
 };
 
-// SVG Icons Component
+// SVG Icons Component - Updated with new designs
 const PropertyIcons = {
   Area: () => (
     <svg viewBox="0 0 24 24" className="icon-area">
-      <path d="M3 6.5A1.5 1.5 0 014.5 5h15A1.5 1.5 0 0121 6.5v11a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 17.5v-11z M4.5 6a.5.5 0 00-.5.5v11a.5.5 0 00.5.5h15a.5.5 0 00.5-.5v-11a.5.5 0 00-.5-.5h-15z"/>
-      <path d="M8 9h8v1H8V9z M8 11h6v1H8v-1z"/>
+      <defs>
+        <linearGradient id="areaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#10b981"/>
+          <stop offset="100%" stopColor="#059669"/>
+        </linearGradient>
+      </defs>
+      <rect x="2" y="2" width="20" height="20" rx="3" fill="url(#areaGrad)" opacity="0.1"/>
+      <path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" stroke="url(#areaGrad)" strokeWidth="2" fill="none"/>
+      <path d="M8 8h8M8 12h6M8 16h4" stroke="url(#areaGrad)" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>
   ),
   Bed: () => (
     <svg viewBox="0 0 24 24" className="icon-bed">
-      <path d="M6 12h12v2H6v-2z M4 8v10h2v-2h12v2h2V8c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2z M6 8h12v2H6V8z"/>
-      <circle cx="9" cy="9" r="1"/>
-      <circle cx="15" cy="9" r="1"/>
+      <defs>
+        <linearGradient id="bedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#6366f1"/>
+          <stop offset="100%" stopColor="#4f46e5"/>
+        </linearGradient>
+      </defs>
+      <rect x="2" y="8" width="20" height="10" rx="2" fill="url(#bedGrad)" opacity="0.1"/>
+      <path d="M3 12h18v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4z" fill="url(#bedGrad)" opacity="0.2"/>
+      <path d="M21 12V8a1 1 0 00-1-1H4a1 1 0 00-1 1v4" stroke="url(#bedGrad)" strokeWidth="2" fill="none"/>
+      <rect x="5" y="9" width="3" height="2" rx="1" fill="url(#bedGrad)"/>
+      <rect x="16" y="9" width="3" height="2" rx="1" fill="url(#bedGrad)"/>
+      <path d="M3 16v2M21 16v2" stroke="url(#bedGrad)" strokeWidth="2" strokeLinecap="round"/>
     </svg>
   ),
   Bath: () => (
     <svg viewBox="0 0 24 24" className="icon-bath">
-      <path d="M9 2v3h6V2h2v3.17c1.83.45 3 2.06 3 4.33v9c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2v-9c0-2.27 1.17-3.88 3-4.33V2h2zm-2 6.5c0 1.38 1.12 2.5 2.5 2.5S12 9.88 12 8.5 10.88 6 9.5 6 7 7.12 7 8.5z"/>
+      <defs>
+        <linearGradient id="bathGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#3b82f6"/>
+          <stop offset="100%" stopColor="#2563eb"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="12" cy="14" rx="8" ry="4" fill="url(#bathGrad)" opacity="0.1"/>
+      <path d="M4 12h16c0 2.5-3.5 6-8 6s-8-3.5-8-6z" fill="url(#bathGrad)" opacity="0.2"/>
+      <path d="M4 12h16" stroke="url(#bathGrad)" strokeWidth="2"/>
+      <path d="M12 6v3" stroke="url(#bathGrad)" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M10 4h4" stroke="url(#bathGrad)" strokeWidth="2" strokeLinecap="round"/>
+      <circle cx="7" cy="15" r="1" fill="url(#bathGrad)" opacity="0.6"/>
+      <circle cx="12" cy="16" r="1" fill="url(#bathGrad)" opacity="0.6"/>
+      <circle cx="17" cy="15" r="1" fill="url(#bathGrad)" opacity="0.6"/>
     </svg>
   ),
   Location: () => (
     <svg viewBox="0 0 24 24" className="icon-location">
-      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      <defs>
+        <linearGradient id="locGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#ef4444"/>
+          <stop offset="100%" stopColor="#dc2626"/>
+        </linearGradient>
+      </defs>
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="url(#locGrad)" opacity="0.2"/>
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="url(#locGrad)" strokeWidth="2" fill="none"/>
+      <circle cx="12" cy="9" r="3" fill="url(#locGrad)"/>
+      <circle cx="12" cy="9" r="1.5" fill="white"/>
     </svg>
   ),
   Views: () => (
     <svg viewBox="0 0 24 24" className="icon-views">
-      <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+      <defs>
+        <linearGradient id="viewGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#f59e0b"/>
+          <stop offset="100%" stopColor="#d97706"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="12" cy="12" rx="10" ry="8" fill="url(#viewGrad)" opacity="0.1"/>
+      <path d="M1 12c2-5 5.5-8 11-8s9 3 11 8c-2 5-5.5 8-11 8s-9-3-11-8z" stroke="url(#viewGrad)" strokeWidth="2" fill="none"/>
+      <circle cx="12" cy="12" r="4" fill="url(#viewGrad)" opacity="0.2"/>
+      <circle cx="12" cy="12" r="4" stroke="url(#viewGrad)" strokeWidth="2" fill="none"/>
+      <circle cx="12" cy="12" r="2" fill="url(#viewGrad)"/>
     </svg>
   ),
   Phone: () => (
     <svg viewBox="0 0 24 24" className="icon-phone">
-      <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+      <defs>
+        <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#22c55e"/>
+          <stop offset="100%" stopColor="#16a34a"/>
+        </linearGradient>
+      </defs>
+      <rect x="6" y="2" width="12" height="20" rx="3" fill="url(#phoneGrad)" opacity="0.1"/>
+      <rect x="6" y="2" width="12" height="20" rx="3" stroke="url(#phoneGrad)" strokeWidth="2" fill="none"/>
+      <rect x="8" y="5" width="8" height="12" rx="1" fill="url(#phoneGrad)" opacity="0.2"/>
+      <circle cx="12" cy="19" r="1.5" fill="url(#phoneGrad)"/>
+      <path d="M10 4h4" stroke="url(#phoneGrad)" strokeWidth="2" strokeLinecap="round"/>
     </svg>
   ),
   Chat: () => (
     <svg viewBox="0 0 24 24" className="icon-chat">
-      <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+      <defs>
+        <linearGradient id="chatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#8b5cf6"/>
+          <stop offset="100%" stopColor="#7c3aed"/>
+        </linearGradient>
+      </defs>
+      <rect x="2" y="4" width="16" height="12" rx="3" fill="url(#chatGrad)" opacity="0.1"/>
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="url(#chatGrad)" strokeWidth="2" fill="none"/>
+      <path d="M8 9h8M8 13h6" stroke="url(#chatGrad)" strokeWidth="1.5" strokeLinecap="round"/>
+      <circle cx="7" cy="11" r="1" fill="url(#chatGrad)" opacity="0.6"/>
     </svg>
   )
 };
