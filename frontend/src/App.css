@@ -662,17 +662,19 @@ body {
 }
 
 .property-location {
-  color: #718096;
+  color: #2d3748;
   margin-bottom: 15px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  font-weight: 500;
 }
 
 .property-location svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .property-details {
