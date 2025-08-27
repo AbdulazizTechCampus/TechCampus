@@ -589,21 +589,18 @@ const PropertyIcons = {
   ),
   Bed: () => (
     <svg viewBox="0 0 24 24" className="property-icon-svg">
-      <rect x="2" y="11" width="20" height="8" rx="1" stroke="#6b7280" strokeWidth="2" fill="none"/>
-      <path d="M6 11V7a2 2 0 012-2h8a2 2 0 012 2v4" stroke="#6b7280" strokeWidth="2" fill="none"/>
-      <rect x="4" y="8" width="4" height="3" rx="1" fill="#6b7280"/>
-      <rect x="16" y="8" width="4" height="3" rx="1" fill="#6b7280"/>
-      <path d="M2 15h20M6 19v-4M18 19v-4" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
+      <rect x="4" y="12" width="16" height="6" rx="1" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <rect x="6" y="8" width="4" height="4" rx="0.5" fill="#6b7280"/>
+      <rect x="14" y="8" width="4" height="4" rx="0.5" fill="#6b7280"/>
+      <path d="M4 15h16M2 18h20" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
     </svg>
   ),
   Bath: () => (
     <svg viewBox="0 0 24 24" className="property-icon-svg">
-      <path d="M2 12h20c0 4-4 8-10 8s-10-4-10-8z" stroke="#6b7280" strokeWidth="2" fill="none"/>
-      <path d="M7 6v6M12 4v8M17 6v6" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
-      <circle cx="7" cy="15" r="1" fill="#6b7280"/>
-      <circle cx="12" cy="15" r="1" fill="#6b7280"/>
-      <circle cx="17" cy="15" r="1" fill="#6b7280"/>
-      <path d="M4 12h16" stroke="#6b7280" strokeWidth="1.5"/>
+      <rect x="6" y="4" width="12" height="16" rx="2" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <rect x="8" y="6" width="8" height="2" rx="1" fill="#6b7280"/>
+      <circle cx="10" cy="14" r="1" fill="#6b7280"/>
+      <path d="M12 12v4M14 14h4" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>
   ),
   Location: () => (
