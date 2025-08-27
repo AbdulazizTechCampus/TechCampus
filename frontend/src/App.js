@@ -578,8 +578,6 @@ const SearchBar = ({ onSearch }) => {
   );
 };
 
-// SVG Icons Component - Simple Gray Icons
-const PropertyIcons = {
 // SVG Icons Component - Simple Gray Icons with clearer expressions
 const PropertyIcons = {
   Area: () => (
