@@ -662,12 +662,12 @@ body {
 }
 
 .property-location {
-  color: #2d3748;
+  color: #6b7280;
   margin-bottom: 15px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-weight: 500;
 }
 
