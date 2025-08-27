@@ -578,111 +578,57 @@ const SearchBar = ({ onSearch }) => {
   );
 };
 
-// SVG Icons Component - Updated with new designs
+// SVG Icons Component - Simple Gray Icons
 const PropertyIcons = {
   Area: () => (
-    <svg viewBox="0 0 24 24" className="icon-area">
-      <defs>
-        <linearGradient id="areaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#10b981"/>
-          <stop offset="100%" stopColor="#059669"/>
-        </linearGradient>
-      </defs>
-      <rect x="2" y="2" width="20" height="20" rx="3" fill="url(#areaGrad)" opacity="0.1"/>
-      <path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" stroke="url(#areaGrad)" strokeWidth="2" fill="none"/>
-      <path d="M8 8h8M8 12h6M8 16h4" stroke="url(#areaGrad)" strokeWidth="1.5" strokeLinecap="round"/>
+    <svg viewBox="0 0 24 24" className="property-icon-svg">
+      <path d="M3 3h18v18H3V3z" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <path d="M7 7h10M7 11h8M7 15h6" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>
   ),
   Bed: () => (
-    <svg viewBox="0 0 24 24" className="icon-bed">
-      <defs>
-        <linearGradient id="bedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#6366f1"/>
-          <stop offset="100%" stopColor="#4f46e5"/>
-        </linearGradient>
-      </defs>
-      <rect x="2" y="8" width="20" height="10" rx="2" fill="url(#bedGrad)" opacity="0.1"/>
-      <path d="M3 12h18v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4z" fill="url(#bedGrad)" opacity="0.2"/>
-      <path d="M21 12V8a1 1 0 00-1-1H4a1 1 0 00-1 1v4" stroke="url(#bedGrad)" strokeWidth="2" fill="none"/>
-      <rect x="5" y="9" width="3" height="2" rx="1" fill="url(#bedGrad)"/>
-      <rect x="16" y="9" width="3" height="2" rx="1" fill="url(#bedGrad)"/>
-      <path d="M3 16v2M21 16v2" stroke="url(#bedGrad)" strokeWidth="2" strokeLinecap="round"/>
+    <svg viewBox="0 0 24 24" className="property-icon-svg">
+      <path d="M3 12h18v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4z" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <path d="M21 12V8a1 1 0 00-1-1H4a1 1 0 00-1 1v4" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <rect x="6" y="9" width="3" height="2" rx="1" fill="#6b7280"/>
+      <rect x="15" y="9" width="3" height="2" rx="1" fill="#6b7280"/>
+      <path d="M3 16v2M21 16v2" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
     </svg>
   ),
   Bath: () => (
-    <svg viewBox="0 0 24 24" className="icon-bath">
-      <defs>
-        <linearGradient id="bathGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#3b82f6"/>
-          <stop offset="100%" stopColor="#2563eb"/>
-        </linearGradient>
-      </defs>
-      <ellipse cx="12" cy="14" rx="8" ry="4" fill="url(#bathGrad)" opacity="0.1"/>
-      <path d="M4 12h16c0 2.5-3.5 6-8 6s-8-3.5-8-6z" fill="url(#bathGrad)" opacity="0.2"/>
-      <path d="M4 12h16" stroke="url(#bathGrad)" strokeWidth="2"/>
-      <path d="M12 6v3" stroke="url(#bathGrad)" strokeWidth="2" strokeLinecap="round"/>
-      <path d="M10 4h4" stroke="url(#bathGrad)" strokeWidth="2" strokeLinecap="round"/>
-      <circle cx="7" cy="15" r="1" fill="url(#bathGrad)" opacity="0.6"/>
-      <circle cx="12" cy="16" r="1" fill="url(#bathGrad)" opacity="0.6"/>
-      <circle cx="17" cy="15" r="1" fill="url(#bathGrad)" opacity="0.6"/>
+    <svg viewBox="0 0 24 24" className="property-icon-svg">
+      <path d="M4 12h16a8 8 0 01-8 8 8 8 0 01-8-8z" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <path d="M12 6v3" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M10 4h4" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
+      <circle cx="8" cy="15" r="1" fill="#6b7280"/>
+      <circle cx="12" cy="16" r="1" fill="#6b7280"/>
+      <circle cx="16" cy="15" r="1" fill="#6b7280"/>
     </svg>
   ),
   Location: () => (
-    <svg viewBox="0 0 24 24" className="icon-location">
-      <defs>
-        <linearGradient id="locGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#ef4444"/>
-          <stop offset="100%" stopColor="#dc2626"/>
-        </linearGradient>
-      </defs>
-      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="url(#locGrad)" opacity="0.2"/>
-      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="url(#locGrad)" strokeWidth="2" fill="none"/>
-      <circle cx="12" cy="9" r="3" fill="url(#locGrad)"/>
-      <circle cx="12" cy="9" r="1.5" fill="white"/>
+    <svg viewBox="0 0 24 24" className="property-icon-svg">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <circle cx="12" cy="9" r="2.5" fill="#6b7280"/>
     </svg>
   ),
   Views: () => (
-    <svg viewBox="0 0 24 24" className="icon-views">
-      <defs>
-        <linearGradient id="viewGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#f59e0b"/>
-          <stop offset="100%" stopColor="#d97706"/>
-        </linearGradient>
-      </defs>
-      <ellipse cx="12" cy="12" rx="10" ry="8" fill="url(#viewGrad)" opacity="0.1"/>
-      <path d="M1 12c2-5 5.5-8 11-8s9 3 11 8c-2 5-5.5 8-11 8s-9-3-11-8z" stroke="url(#viewGrad)" strokeWidth="2" fill="none"/>
-      <circle cx="12" cy="12" r="4" fill="url(#viewGrad)" opacity="0.2"/>
-      <circle cx="12" cy="12" r="4" stroke="url(#viewGrad)" strokeWidth="2" fill="none"/>
-      <circle cx="12" cy="12" r="2" fill="url(#viewGrad)"/>
+    <svg viewBox="0 0 24 24" className="property-icon-svg">
+      <path d="M1 12c2-5 5.5-8 11-8s9 3 11 8c-2 5-5.5 8-11 8s-9-3-11-8z" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <circle cx="12" cy="12" r="3" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <circle cx="12" cy="12" r="1.5" fill="#6b7280"/>
     </svg>
   ),
   Phone: () => (
-    <svg viewBox="0 0 24 24" className="icon-phone">
-      <defs>
-        <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#22c55e"/>
-          <stop offset="100%" stopColor="#16a34a"/>
-        </linearGradient>
-      </defs>
-      <rect x="6" y="2" width="12" height="20" rx="3" fill="url(#phoneGrad)" opacity="0.1"/>
-      <rect x="6" y="2" width="12" height="20" rx="3" stroke="url(#phoneGrad)" strokeWidth="2" fill="none"/>
-      <rect x="8" y="5" width="8" height="12" rx="1" fill="url(#phoneGrad)" opacity="0.2"/>
-      <circle cx="12" cy="19" r="1.5" fill="url(#phoneGrad)"/>
-      <path d="M10 4h4" stroke="url(#phoneGrad)" strokeWidth="2" strokeLinecap="round"/>
+    <svg viewBox="0 0 24 24" className="property-icon-svg">
+      <rect x="6" y="2" width="12" height="20" rx="3" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <circle cx="12" cy="19" r="1" fill="#6b7280"/>
+      <path d="M9 4h6" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
     </svg>
   ),
   Chat: () => (
-    <svg viewBox="0 0 24 24" className="icon-chat">
-      <defs>
-        <linearGradient id="chatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#8b5cf6"/>
-          <stop offset="100%" stopColor="#7c3aed"/>
-        </linearGradient>
-      </defs>
-      <rect x="2" y="4" width="16" height="12" rx="3" fill="url(#chatGrad)" opacity="0.1"/>
-      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="url(#chatGrad)" strokeWidth="2" fill="none"/>
-      <path d="M8 9h8M8 13h6" stroke="url(#chatGrad)" strokeWidth="1.5" strokeLinecap="round"/>
-      <circle cx="7" cy="11" r="1" fill="url(#chatGrad)" opacity="0.6"/>
+    <svg viewBox="0 0 24 24" className="property-icon-svg">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <path d="M8 9h8M8 13h6" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>
   )
 };
