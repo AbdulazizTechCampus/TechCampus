@@ -580,29 +580,32 @@ const SearchBar = ({ onSearch }) => {
 
 // SVG Icons Component - Simple Gray Icons
 const PropertyIcons = {
+// SVG Icons Component - Simple Gray Icons with clearer expressions
+const PropertyIcons = {
   Area: () => (
     <svg viewBox="0 0 24 24" className="property-icon-svg">
-      <path d="M3 3h18v18H3V3z" stroke="#6b7280" strokeWidth="2" fill="none"/>
-      <path d="M7 7h10M7 11h8M7 15h6" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round"/>
+      <rect x="3" y="3" width="18" height="18" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <path d="M3 3l6 6M21 3l-6 6M3 21l6-6M21 21l-6-6" stroke="#6b7280" strokeWidth="1.5"/>
+      <path d="M9 12h6M12 9v6" stroke="#6b7280" strokeWidth="1" strokeLinecap="round"/>
     </svg>
   ),
   Bed: () => (
     <svg viewBox="0 0 24 24" className="property-icon-svg">
-      <path d="M3 12h18v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4z" stroke="#6b7280" strokeWidth="2" fill="none"/>
-      <path d="M21 12V8a1 1 0 00-1-1H4a1 1 0 00-1 1v4" stroke="#6b7280" strokeWidth="2" fill="none"/>
-      <rect x="6" y="9" width="3" height="2" rx="1" fill="#6b7280"/>
-      <rect x="15" y="9" width="3" height="2" rx="1" fill="#6b7280"/>
-      <path d="M3 16v2M21 16v2" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
+      <rect x="2" y="11" width="20" height="8" rx="1" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <path d="M6 11V7a2 2 0 012-2h8a2 2 0 012 2v4" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <rect x="4" y="8" width="4" height="3" rx="1" fill="#6b7280"/>
+      <rect x="16" y="8" width="4" height="3" rx="1" fill="#6b7280"/>
+      <path d="M2 15h20M6 19v-4M18 19v-4" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
     </svg>
   ),
   Bath: () => (
     <svg viewBox="0 0 24 24" className="property-icon-svg">
-      <path d="M4 12h16a8 8 0 01-8 8 8 8 0 01-8-8z" stroke="#6b7280" strokeWidth="2" fill="none"/>
-      <path d="M12 6v3" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
-      <path d="M10 4h4" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
-      <circle cx="8" cy="15" r="1" fill="#6b7280"/>
-      <circle cx="12" cy="16" r="1" fill="#6b7280"/>
-      <circle cx="16" cy="15" r="1" fill="#6b7280"/>
+      <path d="M2 12h20c0 4-4 8-10 8s-10-4-10-8z" stroke="#6b7280" strokeWidth="2" fill="none"/>
+      <path d="M7 6v6M12 4v8M17 6v6" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
+      <circle cx="7" cy="15" r="1" fill="#6b7280"/>
+      <circle cx="12" cy="15" r="1" fill="#6b7280"/>
+      <circle cx="17" cy="15" r="1" fill="#6b7280"/>
+      <path d="M4 12h16" stroke="#6b7280" strokeWidth="1.5"/>
     </svg>
   ),
   Location: () => (
