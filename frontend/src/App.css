@@ -1436,6 +1436,12 @@ body {
   .agent-header {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+  }
+  
+  .follow-btn {
+    align-self: center;
+    margin-top: 10px;
   }
   
   .modal-header, .modal-body {
