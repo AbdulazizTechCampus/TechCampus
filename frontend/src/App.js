@@ -582,9 +582,9 @@ const SearchBar = ({ onSearch }) => {
 const PropertyIcons = {
   Area: () => (
     <svg viewBox="0 0 24 24" className="property-icon-svg">
-      <rect x="3" y="3" width="18" height="18" stroke="#6b7280" strokeWidth="2" fill="none"/>
-      <path d="M3 3l6 6M21 3l-6 6M3 21l6-6M21 21l-6-6" stroke="#6b7280" strokeWidth="1.5"/>
-      <path d="M9 12h6M12 9v6" stroke="#6b7280" strokeWidth="1" strokeLinecap="round"/>
+      <rect x="3" y="3" width="18" height="18" stroke="#6b7280" strokeWidth="1.5" fill="none"/>
+      <path d="M3 9h18M9 3v18" stroke="#6b7280" strokeWidth="1"/>
+      <path d="M6 6h3M15 6h3M6 15h3M15 15h3" stroke="#6b7280" strokeWidth="1"/>
     </svg>
   ),
   Bed: () => (
