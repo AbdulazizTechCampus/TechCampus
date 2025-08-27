@@ -578,33 +578,34 @@ const SearchBar = ({ onSearch }) => {
   );
 };
 
-// SVG Icons Component - Exact match to reference image
+// SVG Icons Component - Based on latest reference image in gray
 const PropertyIcons = {
   Area: () => (
     <svg viewBox="0 0 24 24" className="property-icon-svg">
       <rect x="2" y="2" width="20" height="20" stroke="#6b7280" strokeWidth="1.5" fill="none"/>
-      <path d="M2 2l4 4M22 2l-4 4M2 22l4-4M22 22l-4-4" stroke="#6b7280" strokeWidth="1.5"/>
-      <path d="M6 12h12M12 6v12" stroke="#6b7280" strokeWidth="1"/>
+      <path d="M2 2l5 5M22 2l-5 5M2 22l5-5M22 22l-5-5" stroke="#6b7280" strokeWidth="1.5"/>
+      <path d="M7 12h10M12 7v10" stroke="#6b7280" strokeWidth="1"/>
     </svg>
   ),
   Bed: () => (
     <svg viewBox="0 0 24 24" className="property-icon-svg">
-      <rect x="2" y="10" width="20" height="8" rx="2" stroke="#6b7280" strokeWidth="1.5" fill="none"/>
-      <rect x="4" y="6" width="3" height="4" rx="1" fill="#6b7280"/>
-      <rect x="17" y="6" width="3" height="4" rx="1" fill="#6b7280"/>
-      <path d="M2 14h20" stroke="#6b7280" strokeWidth="1"/>
-      <path d="M6 18v2M18 18v2" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round"/>
+      <rect x="2" y="11" width="20" height="7" rx="1" stroke="#6b7280" strokeWidth="1.5" fill="none"/>
+      <rect x="4" y="7" width="3.5" height="4" rx="0.5" fill="#6b7280"/>
+      <rect x="16.5" y="7" width="3.5" height="4" rx="0.5" fill="#6b7280"/>
+      <path d="M2 14h20M2 18v2M22 18v2" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>
   ),
   Bath: () => (
     <svg viewBox="0 0 24 24" className="property-icon-svg">
-      <ellipse cx="12" cy="15" rx="8" ry="4" stroke="#6b7280" strokeWidth="1.5" fill="none"/>
-      <rect x="11" y="4" width="2" height="8" rx="1" fill="#6b7280"/>
-      <circle cx="8" cy="15" r="0.8" fill="#6b7280"/>
+      <ellipse cx="12" cy="15" rx="9" ry="5" stroke="#6b7280" strokeWidth="1.5" fill="none"/>
+      <path d="M12 5v5" stroke="#6b7280" strokeWidth="2" strokeLinecap="round"/>
+      <circle cx="7" cy="15" r="0.8" fill="#6b7280"/>
       <circle cx="12" cy="16" r="0.8" fill="#6b7280"/>
-      <circle cx="16" cy="15" r="0.8" fill="#6b7280"/>
-      <circle cx="10" cy="14" r="0.5" fill="#6b7280"/>
-      <circle cx="14" cy="17" r="0.5" fill="#6b7280"/>
+      <circle cx="17" cy="15" r="0.8" fill="#6b7280"/>
+      <circle cx="9" cy="13" r="0.5" fill="#6b7280"/>
+      <circle cx="15" cy="17" r="0.5" fill="#6b7280"/>
+      <circle cx="10" cy="17" r="0.4" fill="#6b7280"/>
+      <circle cx="14" cy="13" r="0.4" fill="#6b7280"/>
     </svg>
   ),
   Location: () => (
