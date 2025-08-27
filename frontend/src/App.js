@@ -606,9 +606,9 @@ const PropertyIcons = {
     </svg>
   ),
   Location: () => (
-    <svg viewBox="0 0 24 24" className="property-icon-svg">
-      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#6b7280" strokeWidth="2" fill="none"/>
-      <circle cx="12" cy="9" r="2.5" fill="#6b7280"/>
+    <svg viewBox="0 0 24 24" className="property-icon-svg location-red">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#ef4444" strokeWidth="2" fill="none"/>
+      <circle cx="12" cy="9" r="2.5" fill="#ef4444"/>
     </svg>
   ),
   Views: () => (
