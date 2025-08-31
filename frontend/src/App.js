@@ -719,7 +719,7 @@ const PropertyCard = ({ property }) => {
   );
 };
 
-// Agent Card Component
+// Agent Card Component - Modern Redesign
 const AgentCard = ({ agent }) => {
   const [isFollowing, setIsFollowing] = useState(false);
 
@@ -732,7 +732,8 @@ const AgentCard = ({ agent }) => {
           <div className="agent-license">رخصة فال: {agent.license}</div>
           <div className="agent-region">📍 {agent.region}</div>
           <div className="agent-rating">
-            ⭐ {agent.rating} ({agent.followers} متابع)
+            <span className="rating-stars">★★★★★</span>
+            <span className="rating-text">{agent.rating} ({agent.followers} متابع)</span>
           </div>
         </div>
         <button 
@@ -759,7 +760,9 @@ const AgentCard = ({ agent }) => {
       </div>
       
       <div className="agent-actions">
-        <button className="contact-agent-btn">تواصل معي</button>
+        <button className="contact-agent-btn">
+          تواصل معي
+        </button>
       </div>
     </div>
   );
