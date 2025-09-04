@@ -719,22 +719,14 @@ const PropertyCard = ({ property }) => {
   );
 };
 
-// Agent Card Component - Back to Simple Design
+// Agent Card Component - Exact match to reference image
 const AgentCard = ({ agent }) => {
   const [isFollowing, setIsFollowing] = useState(false);
 
   return (
     <div className="agent-card">
-      <div className="agent-header">
-        <img src={agent.image} alt={agent.name} className="agent-photo" />
-        <div className="agent-info">
-          <h3 className="agent-name">{agent.name}</h3>
-          <div className="agent-license">رخصة فال: {agent.license}</div>
-          <div className="agent-region">📍 {agent.region}</div>
-          <div className="agent-rating">
-            ⭐ {agent.rating} ({agent.followers} متابع)
-          </div>
-        </div>
+      <div className="agent-card-header">
+        <div></div>
         <button 
           className={`follow-btn ${isFollowing ? 'following' : ''}`}
           onClick={() => setIsFollowing(!isFollowing)}
@@ -743,23 +735,47 @@ const AgentCard = ({ agent }) => {
         </button>
       </div>
       
+      <div className="agent-main-info">
+        <div className="agent-photo-container">
+          <div className="agent-photo">
+            لا توجد صورة
+          </div>
+        </div>
+        
+        <h3 className="agent-name">{agent.name}</h3>
+        <div className="agent-location">{agent.region}</div>
+        
+        <div className="agent-rating">
+          <span className="rating-stars">★★★★★</span>
+          <span className="rating-number">{agent.rating}</span>
+          <span className="rating-count">({agent.followers})</span>
+        </div>
+        
+        <div className="agent-join-date">انضم في فبراير 2024</div>
+      </div>
+      
       <div className="agent-stats">
         <div className="stat">
-          <div className="stat-number">{agent.properties}</div>
-          <div className="stat-label">عقار</div>
+          <span className="stat-number">{agent.properties}</span>
+          <span className="stat-label">عقار</span>
         </div>
         <div className="stat">
-          <div className="stat-number">{agent.requests}</div>
-          <div className="stat-label">طلب</div>
+          <span className="stat-number">{agent.requests}</span>
+          <span className="stat-label">طلب</span>
         </div>
         <div className="stat">
-          <div className="stat-number">{agent.followers}</div>
-          <div className="stat-label">متابع</div>
+          <span className="stat-number">{agent.followers}</span>
+          <span className="stat-label">متابع</span>
         </div>
       </div>
       
       <div className="agent-actions">
-        <button className="contact-agent-btn">تواصل معي</button>
+        <button className="whatsapp-btn">
+          📱
+        </button>
+        <button className="contact-agent-btn">
+          📞 اتصل بي
+        </button>
       </div>
     </div>
   );
