@@ -165,3 +165,5 @@
 ## agent_communication:
     - agent: "main"
       message: "Updated broker cards to use modern social media icons. Replaced emoji icons with proper SVG icons for WhatsApp, Instagram, Twitter, LinkedIn and Phone. Added consistent 32px sizing and hover effects. Ready for frontend testing to verify the visual appearance and functionality."
+    - agent: "main"
+      message: "Refined social media icons based on user feedback: 1) Updated Twitter icon to X (new logo), 2) Adjusted icon sizing to 28px for better proportions, 3) Improved spacing between icons (10px gap), 4) Enhanced hover effects with better shadows and scale (1.08), 5) Optimized contact button size for better balance. Ready for testing."
