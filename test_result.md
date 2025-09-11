@@ -128,6 +128,9 @@
         - working: true
           agent: "testing"
           comment: "✅ SNAPCHAT & TIKTOK ICONS SUCCESSFULLY TESTED: All 3 agent cards now display 6 social media icons in correct order (WhatsApp, Instagram, X, Snapchat, TikTok, LinkedIn). New icons verified: Snapchat with yellow background (#FFFC00), TikTok with black background. All icons exactly 28x28px, 10px spacing maintained, hover effects working perfectly (matrix transform 1.08 scale, -3px translateY). Responsive design confirmed across desktop (1920x1080), tablet (768x1024), and mobile (390x844) viewports. Visual consistency excellent."
+        - working: "unknown"
+          agent: "main"
+          comment: "Updated Snapchat and TikTok icons to official logos: Snapchat now uses the official ghost icon (white ghost on yellow background), TikTok updated to black and white logo (removing red color) for cleaner, more recognizable appearance."
 
   - task: "Update Broker Card CSS Styling"
     implemented: true
