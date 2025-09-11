@@ -844,6 +844,12 @@ const AgentCard = ({ agent }) => {
           <button className="social-btn x" title="X (تويتر)">
             <SocialMediaIcons.X />
           </button>
+          <button className="social-btn snapchat" title="سناب شات">
+            <SocialMediaIcons.Snapchat />
+          </button>
+          <button className="social-btn tiktok" title="تيك توك">
+            <SocialMediaIcons.TikTok />
+          </button>
           <button className="social-btn linkedin" title="لينكد إن">
             <SocialMediaIcons.LinkedIn />
           </button>
