@@ -102,16 +102,16 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-## user_problem_statement: "Update the broker cards (بطاقة الوسطاء المميزون) to use modern social media icons with consistent sizing instead of emoji icons. User feedback: Icons are good but sizes need better adjustment and Twitter icon should be updated to X."
+## user_problem_statement: "Update the broker cards (بطاقة الوسطاء المميزون) to use modern social media icons with consistent sizing instead of emoji icons. User feedback: Icons are good but sizes need better adjustment and Twitter icon should be updated to X. Add Snapchat and TikTok icons before LinkedIn."
 
 ## frontend:
   - task: "Update Broker Card Social Media Icons"
     implemented: true
-    working: true
+    working: "unknown"
     file: "/app/frontend/src/App.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "unknown"
           agent: "main"
@@ -122,14 +122,17 @@
         - working: true
           agent: "testing"
           comment: "✅ COMPREHENSIVE TESTING COMPLETED: All 3 agent cards verified successfully. X (Twitter) icon updated with black background (#000000), all icons exactly 28px x 28px, 10px spacing confirmed, hover effects working perfectly (scale 1.08, translateY -3px, proper shadows). Contact buttons properly styled with 140px max-width. All social platforms present (WhatsApp, Instagram, X, LinkedIn). Visual design is excellent and matches requirements perfectly."
+        - working: "unknown"
+          agent: "main"
+          comment: "Added Snapchat (yellow #FFFC00 background) and TikTok (black background with red/white logo) icons before LinkedIn. Updated icon order: WhatsApp, Instagram, X, Snapchat, TikTok, LinkedIn. All new icons using 28px sizing and consistent styling."
 
   - task: "Update Broker Card CSS Styling"
     implemented: true
-    working: true
+    working: "unknown"
     file: "/app/frontend/src/App.css"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "unknown"
           agent: "main"
@@ -140,6 +143,9 @@
         - working: true
           agent: "testing"
           comment: "✅ CSS STYLING VERIFIED: All styling implementations working perfectly. Social icons: 28px x 28px, 10px gap spacing, hover effects with transform matrix(1.08, 0, 0, 1.08, 0, -3) and box-shadow rgba(0, 0, 0, 0.2) 0px 6px 16px 0px. Contact button: max-width 140px, padding 12px 25px. Responsive design working across desktop, tablet, and mobile views."
+        - working: "unknown"
+          agent: "main"
+          comment: "Added hover effects for new Snapchat and TikTok social media icons with brightness(1.15) filter, maintaining consistency with existing hover effects for all social platforms."
 
 ## backend:
   - task: "Backend Services"
