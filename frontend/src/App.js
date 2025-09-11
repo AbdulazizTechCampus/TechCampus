@@ -820,11 +820,23 @@ const AgentCard = ({ agent }) => {
       </div>
       
       <div className="agent-actions">
-        <button className="whatsapp-btn">
-          📱
-        </button>
+        <div className="social-media-icons">
+          <button className="social-btn whatsapp" title="واتساب">
+            <SocialMediaIcons.WhatsApp />
+          </button>
+          <button className="social-btn instagram" title="إنستغرام">
+            <SocialMediaIcons.Instagram />
+          </button>
+          <button className="social-btn twitter" title="تويتر">
+            <SocialMediaIcons.Twitter />
+          </button>
+          <button className="social-btn linkedin" title="لينكد إن">
+            <SocialMediaIcons.LinkedIn />
+          </button>
+        </div>
         <button className="contact-agent-btn">
-          📞 اتصل بي
+          <SocialMediaIcons.Phone />
+          اتصل بي
         </button>
       </div>
     </div>
