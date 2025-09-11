@@ -1070,6 +1070,14 @@ body {
   filter: brightness(1.15);
 }
 
+.social-btn.snapchat:hover .social-icon {
+  filter: brightness(1.15);
+}
+
+.social-btn.tiktok:hover .social-icon {
+  filter: brightness(1.15);
+}
+
 .social-btn.linkedin:hover .social-icon {
   filter: brightness(1.15);
 }
