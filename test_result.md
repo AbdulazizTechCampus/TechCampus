@@ -191,9 +191,7 @@
   run_ui: true
 
 ## test_plan:
-  current_focus:
-    - "Update Broker Card Social Media Icons"
-    - "Update Broker Card CSS Styling"
+  current_focus: []
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
