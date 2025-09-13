@@ -668,8 +668,62 @@ const SocialMediaIcons = {
   ),
   Snapchat: () => (
     <svg viewBox="0 0 24 24" className="social-icon">
-      <rect width="24" height="24" rx="5" fill="#FFFC00"/>
-      <path fill="white" d="M12 2.4c-4.5 0-8.1 3.2-8.1 7.2 0 2.1 1.1 4 2.9 5.2-.2.8-.9 3.3-.9 3.8 0 .2.1.3.3.3.3 0 1.8-1.1 2.5-1.5.7.2 1.4.3 2.1.3h.4c4.5 0 8.1-3.2 8.1-7.2S16.5 2.4 12 2.4z"/>
+      <rect width="24" height="24" rx="5" fill="#FFFC00" stroke="#000" strokeWidth="0.8"/>
+      {/* النقاط السوداء المنتشرة */}
+      <circle cx="3.5" cy="4" r="0.4" fill="#000"/>
+      <circle cx="5" cy="3.2" r="0.3" fill="#000"/>
+      <circle cx="6.5" cy="3.8" r="0.4" fill="#000"/>
+      <circle cx="8" cy="2.8" r="0.3" fill="#000"/>
+      <circle cx="9.5" cy="3.5" r="0.3" fill="#000"/>
+      <circle cx="11" cy="3" r="0.4" fill="#000"/>
+      <circle cx="13" cy="3.2" r="0.3" fill="#000"/>
+      <circle cx="14.5" cy="4" r="0.4" fill="#000"/>
+      <circle cx="16" cy="3.5" r="0.3" fill="#000"/>
+      <circle cx="17.5" cy="4.2" r="0.4" fill="#000"/>
+      <circle cx="19" cy="3.8" r="0.3" fill="#000"/>
+      <circle cx="20.5" cy="4.5" r="0.4" fill="#000"/>
+      
+      <circle cx="2.8" cy="6" r="0.3" fill="#000"/>
+      <circle cx="21.2" cy="6.2" r="0.4" fill="#000"/>
+      <circle cx="2.5" cy="8" r="0.4" fill="#000"/>
+      <circle cx="21.5" cy="8.5" r="0.3" fill="#000"/>
+      <circle cx="2.2" cy="10.5" r="0.3" fill="#000"/>
+      <circle cx="21.8" cy="11" r="0.4" fill="#000"/>
+      <circle cx="2.8" cy="13" r="0.4" fill="#000"/>
+      <circle cx="21.2" cy="13.5" r="0.3" fill="#000"/>
+      <circle cx="3.2" cy="15.5" r="0.3" fill="#000"/>
+      <circle cx="20.8" cy="16" r="0.4" fill="#000"/>
+      <circle cx="2.5" cy="18" r="0.4" fill="#000"/>
+      <circle cx="21.5" cy="18.2" r="0.3" fill="#000"/>
+      
+      <circle cx="3.8" cy="20" r="0.3" fill="#000"/>
+      <circle cx="5.2" cy="20.8" r="0.4" fill="#000"/>
+      <circle cx="7" cy="20.2" r="0.3" fill="#000"/>
+      <circle cx="8.5" cy="21" r="0.4" fill="#000"/>
+      <circle cx="10" cy="20.5" r="0.3" fill="#000"/>
+      <circle cx="12" cy="21.2" r="0.4" fill="#000"/>
+      <circle cx="14" cy="20.8" r="0.3" fill="#000"/>
+      <circle cx="15.5" cy="21" r="0.4" fill="#000"/>
+      <circle cx="17.2" cy="20.5" r="0.3" fill="#000"/>
+      <circle cx="18.8" cy="20.2" r="0.4" fill="#000"/>
+      <circle cx="20.2" cy="20.8" r="0.3" fill="#000"/>
+      
+      {/* مجموعات النقاط */}
+      <circle cx="4" cy="7" r="0.3" fill="#000"/>
+      <circle cx="4.8" cy="7.8" r="0.3" fill="#000"/>
+      <circle cx="3.2" cy="7.8" r="0.3" fill="#000"/>
+      
+      <circle cx="20" cy="7.5" r="0.3" fill="#000"/>
+      <circle cx="19.2" cy="8.3" r="0.3" fill="#000"/>
+      <circle cx="20.8" cy="8.3" r="0.3" fill="#000"/>
+      
+      {/* الشبح الأبيض */}
+      <path fill="white" stroke="#000" strokeWidth="0.6" d="M12 5.5c-2.8 0-5 2.2-5 5 0 1.5 0.7 2.8 1.8 3.7v4.3c0 0.3 0.2 0.5 0.5 0.5 0.1 0 0.3-0.1 0.4-0.2l1.3-1.3 1.3 1.3c0.1 0.1 0.2 0.2 0.4 0.2s0.3-0.1 0.4-0.2l1.3-1.3 1.3 1.3c0.1 0.1 0.2 0.2 0.4 0.2 0.3 0 0.5-0.2 0.5-0.5v-4.3c1.1-0.9 1.8-2.2 1.8-3.7 0-2.8-2.2-5-5-5z"/>
+      {/* عيون الشبح */}
+      <circle cx="10.5" cy="9.5" r="0.8" fill="#000"/>
+      <circle cx="13.5" cy="9.5" r="0.8" fill="#000"/>
+      {/* فم الشبح */}
+      <ellipse cx="12" cy="12" rx="1" ry="0.6" fill="#000"/>
     </svg>
   ),
   TikTok: () => (
