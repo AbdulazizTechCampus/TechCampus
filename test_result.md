@@ -227,8 +227,7 @@
   current_focus:
     - "Update Broker Card Social Media Icons"
     - "Update Broker Card CSS Styling"
-  stuck_tasks:
-    - "Update Broker Card CSS Styling"
+  stuck_tasks: []
   test_all: false
   test_priority: "high_first"
 
