@@ -1102,8 +1102,8 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 5px;
-  margin-bottom: 5px;
+  gap: 4px;
+  margin-bottom: 4px;
 }
 
 .rating-stars {
