@@ -820,6 +820,10 @@ const PropertyCard = ({ property }) => {
         </div>
         
         <div className="property-stats">
+          <span className="publish-date">
+            <PropertyIcons.Date />
+            {new Date(property.publishDate).toLocaleDateString('ar-SA')}
+          </span>
           <span className="views">
             <PropertyIcons.Views />
             {property.views} مشاهدة
