@@ -138,6 +138,7 @@ const SAMPLE_PROPERTIES = [
     status: 'للبيع',
     featured: true,
     views: 2150,
+    publishDate: '2024-01-08',
     agent: {
       name: 'خالد عبدالرحمن النمر',
       phone: '+966503456789',
