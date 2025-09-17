@@ -107,11 +107,11 @@
 ## frontend:
   - task: "Update Broker Card Social Media Icons"
     implemented: true
-    working: "partial"
+    working: false
     file: "/app/frontend/src/App.js"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "unknown"
           agent: "main"
