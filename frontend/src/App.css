@@ -1019,7 +1019,7 @@ body {
   font-weight: 500;
 }
 
-/* Agents Section - Modern Compact Design */
+/* Agents Section - Optimized Compact Design */
 .agents-section {
   padding: 40px 0;
   background: #f8fafc;
@@ -1027,27 +1027,19 @@ body {
 
 .agents-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .agent-card {
   background: white;
   border: 2px solid #4f46e5;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 280px;
-  height: 240px;
+  border-radius: 20px;
+  padding: 20px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(79, 70, 229, 0.1);
   position: relative;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  margin: 0 auto;
+  min-height: 280px;
 }
 
 .agent-card:hover {
@@ -1056,22 +1048,23 @@ body {
 }
 
 .agent-card-header {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
 }
 
 .follow-btn {
   background: rgba(139, 92, 246, 0.15);
   color: #7c3aed;
   border: 1px solid rgba(139, 92, 246, 0.3);
-  padding: 4px 10px;
-  border-radius: 12px;
+  padding: 5px 12px;
+  border-radius: 15px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .follow-btn:hover {
@@ -1084,83 +1077,83 @@ body {
   color: white;
 }
 
-.agent-photo-container {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 2;
-}
-
-.agent-photo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #a855f7;
-  background: #a855f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 0.7rem;
-  text-align: center;
-}
-
 .agent-main-info {
-  padding: 80px 12px 8px 12px;
-  text-align: right;
-  flex: 1;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 85px; /* إفساح مجال للصورة */
 }
 
 .agent-name {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #1a202c;
-  margin-bottom: 3px;
-  line-height: 1.2;
+  margin-bottom: 4px;
+  text-align: right;
 }
 
 .agent-location {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: #6b7280;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  text-align: right;
 }
 
 .agent-rating {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 3px;
-  margin-bottom: 3px;
+  gap: 4px;
+  margin-bottom: 4px;
 }
 
 .rating-stars {
   color: #fbbf24;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .rating-number {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #4f46e5;
 }
 
 .rating-count {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   color: #9ca3af;
 }
 
 .agent-join-date {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: #6b7280;
   text-align: right;
+}
+
+.agent-photo-container {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.agent-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #a855f7;
+  background: #a855f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+  text-align: center;
 }
 
 .agent-stats {
   display: flex;
   justify-content: space-around;
-  padding: 6px 12px;
-  border-top: 1px solid #e5e7eb;
+  margin: 10px 0;
+  padding: 8px 0;
 }
 
 .stat {
@@ -1168,34 +1161,38 @@ body {
 }
 
 .stat-number {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #4f46e5;
   display: block;
-  margin-bottom: 1px;
-  line-height: 1;
+  margin-bottom: 2px;
 }
 
 .stat-label {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: #6b7280;
   font-weight: 500;
-  line-height: 1;
+}
+
+/* Social Media Icons */
+.social-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 .agent-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px;
-  gap: 10px;
-  background: #f9fafb;
-  border-top: 1px solid #e5e7eb;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .social-media-icons {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   align-items: center;
   flex: 1;
 }
@@ -1204,9 +1201,9 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 2px;
   transition: all 0.3s ease;
-  border-radius: 3px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1214,6 +1211,7 @@ body {
 
 .social-btn:hover {
   transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .social-btn.whatsapp:hover .social-icon {
@@ -1240,75 +1238,32 @@ body {
   filter: brightness(1.15);
 }
 
-.social-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
 .contact-agent-btn {
   background: #22c55e;
   color: white;
   border: none;
-  padding: 6px;
+  padding: 8px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
 }
 
 .contact-agent-btn .social-icon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 .contact-agent-btn:hover {
   background: #16a34a;
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .agents-grid {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 15px;
-  }
-  
-  .agent-card {
-    max-width: 260px;
-    height: 220px;
-  }
-  
-  .agent-photo {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .agent-main-info {
-    padding: 65px 10px 6px 10px;
-  }
-  
-  .social-icon {
-    width: 18px;
-    height: 18px;
-  }
-  
-  .contact-agent-btn {
-    width: 28px;
-    height: 28px;
-  }
-  
-  .contact-agent-btn .social-icon {
-    width: 14px;
-    height: 14px;
-  }
 }
 
 /* Footer */
