@@ -908,7 +908,6 @@ const AgentCard = ({ agent }) => {
         </div>
         <button className="contact-agent-btn">
           <SocialMediaIcons.Phone />
-          اتصل بي
         </button>
       </div>
     </div>
