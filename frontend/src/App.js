@@ -199,6 +199,7 @@ const SAMPLE_PROPERTIES = [
     status: 'للبيع',
     featured: true,
     views: 3420,
+    publishDate: '2024-01-05',
     agent: {
       name: 'عبدالله راشد القحطاني',
       phone: '+966506789012',
