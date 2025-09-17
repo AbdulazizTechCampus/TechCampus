@@ -1039,8 +1039,7 @@ body {
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(79, 70, 229, 0.1);
   position: relative;
-  width: 300px;
-  height: 280px;
+  min-height: 280px;
 }
 
 .agent-card:hover {
