@@ -1079,8 +1079,8 @@ body {
 
 .agent-main-info {
   text-align: center;
-  margin-bottom: 15px;
-  margin-right: 90px; /* إفساح مجال للصورة */
+  margin-bottom: 10px;
+  margin-right: 85px; /* إفساح مجال للصورة */
 }
 
 .agent-name {
