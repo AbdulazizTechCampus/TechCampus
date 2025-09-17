@@ -102,16 +102,16 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-## user_problem_statement: "Update the broker cards (بطاقة الوسطاء المميزون) to use modern social media icons with consistent sizing instead of emoji icons. User feedback: Icons are good but sizes need better adjustment and Twitter icon should be updated to X. Add Snapchat and TikTok icons before LinkedIn."
+## user_problem_statement: "Update the broker cards (بطاقة الوسطاء المميزون) to use modern social media icons with consistent sizing instead of emoji icons. User feedback: Icons are good but sizes need better adjustment and Twitter icon should be updated to X. Add Snapchat and TikTok icons before LinkedIn. Update Snapchat to official logo design. Make broker cards smaller and more compact while maintaining current layout. Optimize photo positioning and make contact button icon-only (phone icon only)."
 
 ## frontend:
   - task: "Update Broker Card Social Media Icons"
     implemented: true
-    working: true
+    working: "unknown"
     file: "/app/frontend/src/App.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "unknown"
           agent: "main"
@@ -136,24 +136,21 @@
           comment: "✅ COMPREHENSIVE TESTING COMPLETED - OFFICIAL LOGOS VERIFIED: Snapchat icon shows perfect official yellow background (#FFFC00) with detailed white ghost (21,934 character path), TikTok displays clean black background (#000000) with white logo (595 character path). Both icons maintain exact 28x28px sizing, perfect vertical alignment, and working hover effects (9.3px Y-shift, 2.6px scale). Brand recognition is EXCELLENT - Snapchat ghost is instantly recognizable, TikTok's professional black/white design is clean and modern. All 3 agent cards tested successfully across desktop (1920x1080) and mobile (390x844) viewports. Visual consistency maintained with existing icons. Implementation is production-ready."
         - working: "unknown"
           agent: "main"
-          comment: "Updated Snapchat icon to the classic, simple ghost design - the iconic white ghost shape on yellow background (#FFFC00) that represents the authentic Snapchat brand identity. This is the recognizable ghost logo that users expect to see."
-        - working: true
-          agent: "testing"
-          comment: "✅ COMPREHENSIVE SNAPCHAT ICON TESTING COMPLETED SUCCESSFULLY: Classic ghost design verified across all 3 agent cards. Perfect implementation confirmed: ✅ Size: Exactly 28x28px ✅ Background: Correct #FFFC00 Snapchat yellow ✅ Ghost: White color with 160-character detailed path ✅ Position: Correctly placed as 4th icon (WhatsApp→Instagram→X→Snapchat→TikTok→LinkedIn) ✅ Hover Effects: Working perfectly with matrix(1.08, 0, 0, 1.08, 0, -3) transform, -3px translateY, 1.08x scale, brightness(1.15) filter ✅ Responsive: Confirmed on desktop (1920x1080) and mobile (390x844) viewports ✅ Brand Recognition: EXCELLENT - Classic Snapchat ghost is instantly recognizable with authentic yellow background and white ghost design. Professional appearance maintained. All visual requirements met perfectly. Implementation is production-ready."
-        - working: "unknown"
-          agent: "main"
           comment: "Updated Snapchat icon to match the EXACT official design: yellow rounded rectangle with black border, white ghost in center with eyes and mouth, black dots scattered around the perimeter. This is the authentic Snapchat logo as provided by user with complete visual accuracy."
         - working: true
           agent: "testing"
           comment: "✅ COMPREHENSIVE SNAPCHAT OFFICIAL LOGO TESTING COMPLETED SUCCESSFULLY: Perfect implementation verified across all 3 agent cards. EXACT OFFICIAL DESIGN CONFIRMED: ✅ Yellow Background: Perfect #FFFC00 Snapchat yellow with black border (#000) ✅ Black Dots: 43 scattered dots around perimeter exactly as in official logo ✅ White Ghost: Detailed 258-character path with correct positioning ✅ Ghost Features: 2 black eyes at (10.5,9.5) & (13.5,9.5), black mouth ellipse at (12,12) ✅ Size: Exactly 28x28px with 24x24 viewBox ✅ Icon Order: Correct sequence (WhatsApp→Instagram→X→Snapchat→TikTok→LinkedIn) ✅ Hover Effects: Matrix transform working (1.08 scale, -3px translateY) ✅ Responsive: Confirmed on desktop (1920x1080) and mobile (390x844) viewports. Minor: Mobile shows 32x32px instead of 28x28px but core functionality perfect. The Snapchat logo is INSTANTLY RECOGNIZABLE and matches the official design exactly with all required elements: yellow background, black border, white ghost, black dots, eyes, and mouth. Implementation is production-ready and meets all user requirements perfectly."
+        - working: "unknown"
+          agent: "main"
+          comment: "Made broker cards more compact and optimized: Reduced social media icons from 28px to 24px, updated contact button to icon-only (phone icon without text), optimized layout for smaller form factor while maintaining professional appearance and functionality."
 
   - task: "Update Broker Card CSS Styling"
     implemented: true
-    working: true
+    working: "unknown"
     file: "/app/frontend/src/App.css"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "unknown"
           agent: "main"
@@ -170,6 +167,9 @@
         - working: true
           agent: "testing"
           comment: "✅ NEW ICONS CSS STYLING VERIFIED: Snapchat and TikTok hover effects working perfectly with brightness(1.15) filter. All 6 social media icons maintain consistent 28px sizing, 10px gap spacing, and unified hover behavior (scale 1.08, translateY -3px, box-shadow). CSS styling confirmed across all responsive breakpoints (desktop, tablet, mobile). Visual consistency and professional appearance maintained."
+        - working: "unknown"
+          agent: "main"
+          comment: "Redesigned broker cards for compact size: Reduced min-height from 380px to 240px, card width from 380px to 300px, optimized padding from 30px to 20px, repositioned photo from right to left side, made contact button circular icon-only (40x40px), reduced social icons to 24px, improved responsive layout for mobile devices."
 
 ## backend:
   - task: "Backend Services"
