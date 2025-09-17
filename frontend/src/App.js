@@ -178,6 +178,7 @@ const SAMPLE_PROPERTIES = [
     status: 'للإيجار',
     featured: false,
     views: 420,
+    publishDate: '2024-01-18',
     agent: {
       name: 'محمد علي السويد',
       phone: '+966505678901',
