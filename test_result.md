@@ -149,11 +149,11 @@
 
   - task: "Update Broker Card CSS Styling"
     implemented: true
-    working: "unknown"
+    working: "partial"
     file: "/app/frontend/src/App.css"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "unknown"
           agent: "main"
