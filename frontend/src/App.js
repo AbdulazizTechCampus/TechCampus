@@ -119,6 +119,7 @@ const SAMPLE_PROPERTIES = [
     status: 'للإيجار',
     featured: true,
     views: 890,
+    publishDate: '2024-01-10',
     agent: {
       name: 'فاطمة سالم الخالد',
       phone: '+966502345678',
