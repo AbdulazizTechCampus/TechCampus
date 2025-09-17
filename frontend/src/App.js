@@ -159,6 +159,7 @@ const SAMPLE_PROPERTIES = [
     status: 'للبيع',
     featured: false,
     views: 765,
+    publishDate: '2024-01-12',
     agent: {
       name: 'سارة أحمد الفريح',
       phone: '+966504567890',
