@@ -1092,9 +1092,9 @@ body {
 }
 
 .agent-location {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #6b7280;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   text-align: right;
 }
 
