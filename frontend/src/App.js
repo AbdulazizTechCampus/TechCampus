@@ -98,6 +98,7 @@ const SAMPLE_PROPERTIES = [
     status: 'للبيع',
     featured: true,
     views: 1250,
+    publishDate: '2024-01-15',
     agent: {
       name: 'أحمد محمد العبدالله',
       phone: '+966501234567',
