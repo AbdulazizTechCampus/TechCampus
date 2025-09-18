@@ -277,7 +277,7 @@ body {
 
 /* Voice Search Button */
 .voice-search-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-dark) 100%);
   color: white;
   border: none;
   padding: 12px;
@@ -289,18 +289,19 @@ body {
   justify-content: center;
   width: 48px;
   height: 48px;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(8, 126, 139, 0.4);
 }
 
 .voice-search-btn:hover {
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  box-shadow: 0 6px 20px rgba(8, 126, 139, 0.6);
+  background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-red) 100%);
 }
 
 .voice-search-btn.listening {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-red) 100%);
   animation: pulse 1.5s infinite;
-  box-shadow: 0 4px 20px rgba(255, 107, 107, 0.6);
+  box-shadow: 0 4px 20px rgba(255, 90, 95, 0.6);
 }
 
 .microphone-icon {
