@@ -79,16 +79,17 @@ body {
 
 .site-title {
   font-size: 1.8rem;
-  font-weight: bold;
-  color: #1a202c;
+  font-weight: 800;
+  color: white;
   margin: 0;
-  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .site-subtitle {
-  font-size: 0.85rem;
-  color: #718096;
+  font-size: 0.9rem;
+  color: var(--primary-light);
   margin: 0;
+  font-weight: 500;
 }
 
 /* Navigation */
