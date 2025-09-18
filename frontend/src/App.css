@@ -1,3 +1,16 @@
+/* CSS Variables for New Color Theme */
+:root {
+  --primary-dark: #0B3954;      /* Dark blue */
+  --primary-teal: #087E8B;      /* Teal */  
+  --primary-light: #BFD7EA;     /* Light blue */
+  --accent-coral: #FF5A5F;      /* Coral red */
+  --accent-red: #C81D25;        /* Dark red */
+  --text-primary: #1a202c;      /* Dark text */
+  --text-secondary: #6b7280;    /* Gray text */
+  --bg-light: #f8fafc;          /* Light background */
+  --border-color: #e5e7eb;      /* Border color */
+}
+
 /* CSS Reset and Base Styles */
 * {
   margin: 0;
