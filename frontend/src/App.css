@@ -160,7 +160,7 @@ body {
 
 .dropdown-content a:hover {
   background: #f7fafc;
-  color: #4f46e5;
+  color: var(--primary-teal);
 }
 
 /* Auth Section */
