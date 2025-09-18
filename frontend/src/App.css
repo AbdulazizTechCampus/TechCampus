@@ -1220,8 +1220,8 @@ body {
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #a855f7;
-  background: #a855f7;
+  border: 3px solid var(--primary-teal);
+  background: var(--primary-teal);
   display: flex;
   align-items: center;
   justify-content: center;
