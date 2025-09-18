@@ -376,11 +376,20 @@ body {
 .search-field input {
   width: 100%;
   padding: 12px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid var(--primary-light);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #2d3748;
+  background: white;
+  color: var(--text-primary);
   font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.search-field select:focus,
+.search-field input:focus {
+  outline: none;
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 3px rgba(8, 126, 139, 0.1);
+  background: rgba(191, 215, 234, 0.05);
 }
 
 .advanced-search-btn, .search-btn {
