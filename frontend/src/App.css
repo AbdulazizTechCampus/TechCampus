@@ -561,7 +561,7 @@ body {
   border: none;
   border-radius: 20px;
   background: transparent;
-  color: #4f46e5;
+  color: var(--primary-teal);
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
