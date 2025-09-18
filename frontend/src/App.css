@@ -1129,12 +1129,12 @@ body {
 }
 
 .follow-btn:hover {
-  background: #7c3aed;
+  background: var(--primary-teal);
   color: white;
 }
 
 .follow-btn.following {
-  background: #7c3aed;
+  background: var(--primary-teal);
   color: white;
 }
 
