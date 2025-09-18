@@ -190,7 +190,7 @@ body {
 }
 
 .user-type-badge {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-red) 100%);
   color: white;
   padding: 2px 8px;
   border-radius: 12px;
