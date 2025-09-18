@@ -1608,7 +1608,7 @@ body {
 
 .submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 8px 25px rgba(8, 126, 139, 0.3);
 }
 
 .submit-btn:disabled {
