@@ -252,7 +252,7 @@ const Header = ({ onLoginClick, currentUser, onLogout }) => {
       <div className="container">
         <div className="header-content">
           <div className="logo-section">
-            <div className="logo">🏠</div>
+            <img src="https://customer-assets.emergentagent.com/job_realty-cards/artifacts/40c8rkgw_Onwan%20Logo%20inh4.png" alt="أونوان" className="logo" />
             <div className="brand-info">
               <h1 className="site-title">عنوان</h1>
               <p className="site-subtitle">منصة الوساطة والتسويق العقاري</p>
