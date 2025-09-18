@@ -587,7 +587,7 @@ body {
 }
 
 .tab-btn.active {
-  background: #4f46e5;
+  background: var(--primary-teal);
   color: white;
 }
 
