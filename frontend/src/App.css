@@ -1631,7 +1631,7 @@ body {
 }
 
 .back-btn:hover {
-  background: #4f46e5;
+  background: var(--primary-teal);
   color: white;
   transform: translateY(-1px);
 }
