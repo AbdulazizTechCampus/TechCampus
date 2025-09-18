@@ -105,7 +105,7 @@ body {
 }
 
 .nav-link {
-  color: white;
+  color: var(--primary-dark);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
@@ -117,14 +117,14 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--primary-light);
-  background: rgba(191, 215, 234, 0.2);
+  color: var(--primary-teal);
+  background: rgba(8, 126, 139, 0.1);
   transform: translateY(-2px);
 }
 
 .nav-link.active {
   color: var(--accent-coral);
-  background: rgba(255, 90, 95, 0.15);
+  background: rgba(255, 90, 95, 0.1);
 }
 
 /* Dropdown */
