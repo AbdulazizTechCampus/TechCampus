@@ -80,14 +80,14 @@ body {
 .site-title {
   font-size: 1.8rem;
   font-weight: 800;
-  color: white;
+  color: var(--primary-dark);
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .site-subtitle {
   font-size: 0.9rem;
-  color: var(--primary-light);
+  color: var(--primary-teal);
   margin: 0;
   font-weight: 500;
 }
