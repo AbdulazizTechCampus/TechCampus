@@ -105,19 +105,26 @@ body {
 }
 
 .nav-link {
+  color: white;
   text-decoration: none;
-  color: #4a5568;
-  font-weight: 500;
-  padding: 10px 16px;
-  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
   transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+  position: relative;
   display: block;
 }
 
 .nav-link:hover {
-  color: #4f46e5;
-  background: rgba(79, 70, 229, 0.1);
-  transform: translateY(-1px);
+  color: var(--primary-light);
+  background: rgba(191, 215, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  color: var(--accent-coral);
+  background: rgba(255, 90, 95, 0.15);
 }
 
 /* Dropdown */
