@@ -199,7 +199,7 @@ body {
 }
 
 .login-btn, .logout-btn {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-red) 100%);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -207,13 +207,13 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 90, 95, 0.3);
   font-size: 0.9rem;
 }
 
 .login-btn:hover, .logout-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 90, 95, 0.4);
 }
 
 /* Search Section */
