@@ -1580,7 +1580,7 @@ body {
 .form-input:focus, .form-select:focus {
   outline: none;
   border-color: var(--primary-teal);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  box-shadow: 0 0 0 3px rgba(8, 126, 139, 0.1);
   transform: translateY(-1px);
 }
 
