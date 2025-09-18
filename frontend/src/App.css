@@ -1175,7 +1175,7 @@ body {
 .rating-number {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #4f46e5;
+  color: var(--primary-teal);
 }
 
 .rating-count {
