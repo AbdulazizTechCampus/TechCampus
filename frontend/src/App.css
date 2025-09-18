@@ -962,7 +962,7 @@ body {
 }
 
 .follow-btn {
-  background: rgba(139, 92, 246, 0.15);
+  background: rgba(8, 126, 139, 0.15);
   color: var(--primary-teal);
   border: 1px solid rgba(8, 126, 139, 0.3);
   padding: 6px 16px;
