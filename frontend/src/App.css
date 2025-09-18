@@ -1429,7 +1429,7 @@ body {
 }
 
 .social-link:hover {
-  background: #4f46e5;
+  background: var(--primary-teal);
   transform: translateY(-2px);
 }
 
