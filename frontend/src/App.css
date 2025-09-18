@@ -1344,6 +1344,14 @@ body {
   color: white;
 }
 
+/* Footer Logo */
+.footer-logo .logo {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
 .footer-logo {
   display: flex;
   flex-direction: column;
