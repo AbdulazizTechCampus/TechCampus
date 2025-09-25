@@ -77,6 +77,10 @@ body {
   flex-direction: column;
 }
 
+/* Import Google Fonts for Arabic and English */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clother:wght@400;600;700&display=swap');
+
 .site-title {
   font-size: 2.2rem;
   font-weight: 800;
@@ -88,15 +92,20 @@ body {
 }
 
 .site-name-arabic {
-  color: #FF5A5F;
-  text-shadow: 0 2px 4px rgba(255, 90, 95, 0.3);
+  color: #FF0000;
+  text-shadow: 0 2px 4px rgba(255, 0, 0, 0.3);
+  font-family: 'Cairo', 'Amiri', Arial, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .site-name-english {
-  color: var(--primary-dark);
+  color: #FF0000;
   font-size: 1.8rem;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Clother', 'Arial Black', Arial, sans-serif;
+  font-weight: 700;
   letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(255, 0, 0, 0.3);
 }
 
 .site-subtitle {
